@@ -39,13 +39,14 @@ export default function KeyVisual() {
         <section>               
             <Swiper
                 modules={[Autoplay,Pagination]}
+                loop={true} // Enable infinite looping
                 autoplay={{
-                    delay: 4500,
+                    delay: 2500,
 
                 }}
             >
-                {photos.map((photo) => (
-                <SwiperSlide>
+                {photos.map((photo, index) => (
+                <SwiperSlide key={index}>
                     <Image
                         src={photo.url}
                         width={300}

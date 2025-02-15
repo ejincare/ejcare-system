@@ -19,3 +19,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* App.css */
+.swiper-container {
+  @apply max-w-full h-auto;
+}
+
+.swiper-slide {
+  @apply flex justify-center items-center text-lg bg-gray-200;
+}
+
+.swiper-slide img {
+  @apply w-full h-full object-cover max-h-96; /* max-h-96 is equivalent to max-height: 24rem (384px) */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.swiper-slide-active img {
+  animation: zoomIn 2s forwards;
+}
