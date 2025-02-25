@@ -4,6 +4,7 @@ import KeyVisual from "@/components/KeyVisual";
 import MainText from "@/components/MainText";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import ContactUs from "@/components/ContactUs";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +22,7 @@ export default function Home() {
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
       <main className="">
+        <Header />
         <KeyVisual />
         <MainText />
         <PhotoCarousel />
