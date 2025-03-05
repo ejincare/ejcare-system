@@ -1,9 +1,13 @@
-
+import Link from "next/link";
 
 export default function Navigator() {
     return (
-        <section>
-          contact us
-        </section>
+      <ul className="depth1">
+        <li className="">
+          <Link href={"/"} >
+            contact
+          </Link>
+        </li>
+      </ul>
     )
 }

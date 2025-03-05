@@ -6,6 +6,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 import ContactUs from "@/components/ContactUs";
 import Header from "@/components/Header";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
