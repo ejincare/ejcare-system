@@ -5,13 +5,15 @@ import Navigator from "./Navigator";
 import ShareBtn from "./ShareBtn";
 import HamburgerBtn from "./HamburgerBtn";
 import SiteMap from "./SiteMap";
-import $ from 'jquery';
+import { useState } from "react";
+
 
 export default function Header() {
-  function SiteMapOpen() {
-    $(".sitemap").toggleClass("on");
-    
-  }
+    const [isMenu, setIsMenu] = useState(false);
+    const SiteMapOpen = () =>   {
+        console.log("^^^^^^^^^^^^^"+isMenu);
+        setIsMenu((isMenu) => !isMenu);
+    };
 
     return (
         <div id="header">
@@ -27,8 +29,8 @@ export default function Header() {
             <div className="right_btn" onClick={SiteMapOpen}>
                 <HamburgerBtn />
             </div>
-            <div className="sitemap">
-                <SiteMap />
+            <div className={"sitemap" + (isMenu ? " on":"")}>
+                <SiteMap siteMapClose={SiteMapOpen}/>
             </div>
         </div>
     )

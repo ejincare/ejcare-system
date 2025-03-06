@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import $ from 'jquery';
+import { useState } from "react";
+import React from "react";
 
-export default function SiteMap() {
-  function SiteMapClose() {
-    $(".sitemap").toggleClass("on"); 
-  }
+
+const SiteMap = ({siteMapClose}:any)  =>  {
+    const [isSiteMap, setIsSiteMap] = useState(true);
+    function SiteMapClose () {
+      setIsSiteMap((isSiteMap) => !isSiteMap)
+      siteMapClose(isSiteMap);
+    };
     return (
       <div className="cont">
         <div className="top">
@@ -29,3 +33,5 @@ export default function SiteMap() {
       </div>
     )
 }
+
+export default SiteMap;
