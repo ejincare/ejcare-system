@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face  {
+  font-family: "NEXONLv1Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/NEXONLv1GothicRegular.woff) format("woff");
+}
+
+@font-face  {
+  font-family: "NEXONLv1Gothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url(./font/NEXONLv1GothicBold.woff) format("woff");
+}
+
+
 :root {
   --background: #ffffff;
 }
@@ -14,7 +29,7 @@
 
 body {
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "NEXONLv1Gothic",sans-serif; 
 }
 
 /* App.css */
