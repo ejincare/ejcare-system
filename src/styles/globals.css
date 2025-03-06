@@ -91,9 +91,9 @@ body {
     #header.down,
     #header {transform: none !important;
     /* position:absolute;top:0;left:0;right:0;z-index: 10; */}
-    #header{padding: 1rem 20px;
-      display: flex
-  }
+    #header {padding: 1rem 20px;display: flex}
+  
+    #mheader{display: flex;justify-content: space-between;padding: 1rem 20px;border-bottom: 1px solid #636c75;}
     #header .h_in{padding: 0 20px;}
     #header .logo{margin-left: 0;}
     #header .logo a img{transform: translateY(-3px); height: 36px;}
@@ -137,8 +137,8 @@ body {
 .sitemap .cont .top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.4); }
 .sitemap .cont .top .en_tit{font-size: 45px; font-weight: 600; font-family: var(--pop); text-transform: uppercase; line-height: 1em;}
 .sitemap .cont .top .sitemap_logo{display: none;}
-.sitemap .cont .top .close_btn { display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; font-size: 3rem; cursor: pointer; }
-.sitemap .cont .top .close_btn svg{width: 100%; height: 100%; fill: #fff;}
+.sitemap .cont .close_btn { display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; font-size: 3rem; cursor: pointer; }
+.sitemap .cont .close_btn svg{width: 100%; height: 100%; fill: #fff;}
 .sitemap .cont .top .lang{display: none;}
 
 .sitemap .cont .list { display: flex; align-items: flex-start; justify-content: space-between; padding: 0 30px; margin-top: 5rem; }
@@ -155,9 +155,8 @@ body {
   height: 100%;
   fill: rgb(255, 255, 255);
 }
-
 .logo{  
-  color: #fff;
+  color: #2d3e4e;
   font-size: 0.8rem;
   display: flex;
   line-height: 2.5;
@@ -270,7 +269,7 @@ body {
       .sitemap .cont {overflow-y: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%; max-width: 100%; height: 100%; padding: 0; margin: 0 auto;}
       .sitemap .cont .top{flex-wrap: wrap; position: relative; z-index: 1; padding: 1rem; border-bottom: none;}
       .sitemap .cont .top .en_tit{display: none;}
-      .sitemap .cont .top .sitemap_logo{display: flex; align-items: center; height: 40px;}
+      .sitemap .cont .top .sitemap_logo{display: flex; align-items: center; /*height: 40px;*/}
       .sitemap .cont .top .sitemap_logo img{transform: translateY(-3px); height: 36px;}
       .sitemap .cont .top .sitemap_logo .foreign{display: none;}
       .sitemap .cont .top .close_btn{}
@@ -285,7 +284,7 @@ body {
       .sitemap .cont .top .lang.open ul{opacity: 1; transform: translateY(5px); pointer-events: auto; transition: all 0.3s;}
 
       .sitemap .cont .list_wrap{max-height: none;}
-      .sitemap .cont .list { display: flex; flex-direction: column; position: relative; max-width: 100%; padding: 0 0 100px; margin: 0 auto; border-top: 1px solid rgba(255, 255, 255, 0.2);}
+      .sitemap .cont .list { display: flex; flex-direction: column; position: relative; max-width: 100%; padding: 0 0 100px; margin: 0 auto; /*border-top: 1px solid rgba(255, 255, 255, 0.2);*/}
       .sitemap .cont .list::before{display: none;}
       .sitemap .cont .list .depth1{width: 100%; padding: 20px; border-bottom: 0;}
       .sitemap .cont .list .depth1 + .depth1 {margin-left: 0;}
@@ -306,13 +305,13 @@ body {
         line-height: 2.5;
         font-weight: bold;
       }
-      .logo{  
+      /* .logo{  
         color: #2d3e4e;
         font-size: 0.8rem;
         display: flex;
         line-height: 2.5;
         font-weight: bold;
-      }
+      } */
       .logo span{
         padding-left: 0.2rem;
       }
