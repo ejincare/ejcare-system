@@ -65,15 +65,15 @@ export default function KeyVisual() {
                     <div className="imageContainer">
                         <Image
                             src={photos[0].url}
-                            width={300}
-                            height={200}
+                            width={1280}
+                            height={960}
                             alt={photos[0].alt}
                             className='pc'
                         />
                         <Image
                             src={photos[1].url}
-                            width={300}
-                            height={200}
+                            width={1280}
+                            height={960}
                             alt={photos[1].alt}
                             className='mobile'
                         />
@@ -93,8 +93,8 @@ export default function KeyVisual() {
                     <div className="imageContainer">
                         <Image
                             src={photos[2].url}
-                            width={300}
-                            height={200}
+                            width={600}
+                            height={400}
                             alt={photos[2].alt}
                             className='pc'
                         />

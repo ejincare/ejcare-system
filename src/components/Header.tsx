@@ -16,8 +16,8 @@ export default function Header() {
     };
 
     return (
-        <div id="header">
-            <div className="h_in">
+        <div id="header" className="py-4 px-4 sm:px-0 box-border border-b">
+            <div className="h_in max-w-screen-xl mx-auto">
                 <h1 className="logo">
                     <Link href={"/"} className="logo">
                         <Image src={"/img/logo.png"} width={30} height={30} alt="" />
@@ -27,7 +27,7 @@ export default function Header() {
                 <nav>
                     <Navigator />
                 </nav>
-                <div className="right_btn" onClick={SiteMapOpen}>
+                <div className="right_btn justify-end" onClick={SiteMapOpen}>
                     <HamburgerBtn />
                 </div>
                 <div className={"sitemap" + (isMenu ? " on":"")}>
