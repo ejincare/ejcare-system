@@ -17,20 +17,22 @@ export default function Header() {
 
     return (
         <div id="header">
-            <h1 className="logo">
-                <Link href={"/"} className="logo">
-                    <Image src={"/img/logo.png"} width={30} height={30} alt="" />
-                    <span>이진케어시스템</span>
-                </Link>
-            </h1>
-            <nav>
-                <Navigator />
-            </nav>
-            <div className="right_btn" onClick={SiteMapOpen}>
-                <HamburgerBtn />
-            </div>
-            <div className={"sitemap" + (isMenu ? " on":"")}>
-                <SiteMap siteMapClose={SiteMapOpen}/>
+            <div className="h_in">
+                <h1 className="logo">
+                    <Link href={"/"} className="logo">
+                        <Image src={"/img/logo.png"} width={30} height={30} alt="" />
+                        <span>이진케어시스템</span>
+                    </Link>
+                </h1>
+                <nav>
+                    <Navigator />
+                </nav>
+                <div className="right_btn" onClick={SiteMapOpen}>
+                    <HamburgerBtn />
+                </div>
+                <div className={"sitemap" + (isMenu ? " on":"")}>
+                    <SiteMap siteMapClose={SiteMapOpen}/>
+                </div>
             </div>
         </div>
     )
