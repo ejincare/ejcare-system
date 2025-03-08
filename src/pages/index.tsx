@@ -5,6 +5,7 @@ import MainText from "@/components/MainText";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import ContactUs from "@/components/ContactUs";
 import Header from "@/components/Header";
+import Email from "@/components/Email";
 
 
 const geistSans = Geist({
@@ -28,9 +29,7 @@ export default function Home() {
         <MainText />
         <PhotoCarousel />
         <ContactUs />
-        <div>
-          email to
-        </div>
+        <Email />
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         

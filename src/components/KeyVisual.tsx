@@ -44,13 +44,15 @@ export default function KeyVisual() {
             alt: '/main_visual02.jpg',
             className: 'pc',
             stext: '이진케어시스템',
+            stitle: '이진케어시스템',
             ttitle: '이진케어시스템',
         },
         {
             url: '/main_visual02_m.jpg',
             alt: '/main_visual02_m.jpg',
             className: 'mobile',
-            text: '이진케어시스템',
+            stext: '이진케어시스템',
+            stitle: '이진케어시스템',
             ttitle: '이진케어시스템',
         },        
     ]
@@ -64,9 +66,9 @@ export default function KeyVisual() {
                     //     delay: 2500,
                     // }}
                     className='rounded-xl sm:rounded-2xl filter shadow-lg'
-                >                
+                >
                     <SwiperSlide key={0} className='swiper-slide-keyvisual'>
-                        <div className="imageContainer">
+                        <div className="relative w-full h-full">
                             <Image
                                 src={photos[0].url}
                                 width={1280}
@@ -81,11 +83,11 @@ export default function KeyVisual() {
                                 alt={photos[1].alt}
                                 className='mobile'
                             />
-                            <div className="textOverlay leading-[1.3]">
+                            <div className="textOverlay flex flex-col items-start justify-center absolute top-0 right-0 z-20 w-1/2 h-full pl-12 leading-[1.3]">
                                 <span className='sub_tit text-xl sm:text-2xl'>{photos[0].stitle}</span>
                                 <span className='tit text-2xl sm:text-4xl'>{photos[0].ttitle}</span>
                                 <div className="more_btn">
-                                    <a href="#" className="more" target="_self">
+                                    <a href="#" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
                                         View More
                                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#ffffff"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
                                     </a>
@@ -94,7 +96,7 @@ export default function KeyVisual() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide key={1} className='swiper-slide-keyvisual'>
-                        <div className="imageContainer">
+                        <div className="relative w-full h-full">
                             <Image
                                 src={photos[2].url}
                                 width={600}
@@ -109,11 +111,11 @@ export default function KeyVisual() {
                                 alt={photos[3].alt}
                                 className='mobile'
                             />
-                            <div className="textOverlay">
-                                <span className='sub_tit'>{photos[2].stitle}</span>
-                                <span className='tit'>{photos[2].ttitle}</span>
+                            <div className="textOverlay flex flex-col items-start justify-center absolute top-0 right-0 z-20 w-1/2 h-full pl-12 leading-[1.3]">
+                            <span className='sub_tit text-xl sm:text-2xl'>{photos[2].stitle}</span>
+                            <span className='tit text-2xl sm:text-4xl'>{photos[2].ttitle}</span>
                                 <div className="more_btn">
-                                    <a href="#" className="more" target="_self">
+                                    <a href="#" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
                                         View More
                                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
                                     </a>

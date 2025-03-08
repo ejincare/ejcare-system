@@ -34,27 +34,6 @@ body {
 
 /* App.css */
 
-.imageContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.textOverlay {
-  display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    width: 50%;
-    height: 100%;
-    padding-left: 48px;
-
-}
-
     /* #header {
       position: fixed;
       left: 0;
@@ -78,8 +57,8 @@ body {
     
     #header .h_in{display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0; position: relative; width: 100%; /*max-width: 100%;*/ height: 100%; /*padding: 0 60px;*/ align-items: center;}
 
-    #header .logo{margin-left: 0;}
-    #header .logo a img{transform: translateY(-3px); /*height: 36px;*/}
+    /* #header .logo{margin-left: 0;} */
+    /* #header .logo a img{transform: translateY(-3px); height: 36px;} */
     #header nav{display: block;}
     #header .right_btn{display: flex;align-items: center;}
 
@@ -91,16 +70,51 @@ body {
     #header .right_btn .share_wrap .sns_box{left: -6px;}
     #header .right_btn .share_wrap .sns_box div{}
     #header .right_btn .share_wrap .sns_box div svg{font-size: 16px;}
-    #header .right_btn .ham_btn{width: 30px; height: 30px; margin-left: 20px;}
-    #header .right_btn .ham_btn svg{fill: #262626;font-size: 2.8rem;transition: fill 0.25s;}
-    #header .right_btn .ham_btn {
+    /* #header .right_btn .ham_btn{width: 30px; height: 30px; margin-left: 20px;} */
+    /* #header .right_btn .ham_btn svg{fill: #262626;font-size: 2.8rem;transition: fill 0.25s;} */
+    /* #header .right_btn .ham_btn {
       display:none;
         align-items: center;
         justify-content: center;
         width: 42px;
         height: 42px;
         margin-left: 30px;
+    } */
+    .line {
+      fill: none;
+      stroke: black;
+      stroke-width: 6;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .line1 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+    .line2 {
+      stroke-dasharray: 60 60;
+      stroke-width: 6;
+    }
+    .line3 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+    .on .line1 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+    .on .line2 {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+      stroke-width: 6;
+    }
+    .on .line3 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+
     #header nav{height: 100%;}
 #header nav .depth1 {display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; height: 100%; }
 #header nav .depth1 li { position: relative; }
@@ -112,8 +126,8 @@ body {
         
  
 /*=====사이트 맵=====*/
-.sitemap { position: fixed; left: 0; top: 0; width: 100%; height: 100vh; background-color: #2d3e4e; color: #fff; opacity: 0; z-index: 9999; transition: opacity 0.4s; pointer-events: none; }
-.sitemap.on { opacity: 1; pointer-events: visible; }
+/* .sitemap { position: fixed; left: 0; top: 0; width: 100%; height: 100vh; background-color: #2d3e4e; color: #fff; opacity: 0; z-index: 9999; transition: opacity 0.4s; pointer-events: none; } */
+/* .sitemap.on { opacity: 1; pointer-events: visible; } */
 
 .sitemap .cont { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%; max-width: 124rem; margin: 0 auto; padding: 0 20px;}
 .sitemap .cont .mo_menu { display: none; }
@@ -139,16 +153,6 @@ body {
   height: 100%;
   fill: rgb(255, 255, 255);
 }
-.logo{  
-  color: #2d3e4e;
-  font-size: 0.8rem;
-  display: flex;
-  line-height: 2.5;
-  font-weight: bold;
-}
-.logo span{
-  padding-left: 0.2rem;
-}
 
 .swiper-slide img.pc {
   display: block;
@@ -158,7 +162,7 @@ body {
 }
 
 .textOverlay {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -168,22 +172,22 @@ body {
   z-index: 2;
   width: 50%;
   height: 100%;
-  padding-left: 48px;
+  padding-left: 48px; */
 }
 
 .textOverlay .more {
-  display: inline-flex;
+  /* display: inline-flex;
   align-items: center;
   white-space: nowrap;
   transform: translateY(100%);
   padding: 1em 1.5em;
-  /* margin-top: 3em; */
+    margin-top: 3em;
   background: #2d3e4e;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
   border-radius: 2em;
-  line-height: 1em;
+  line-height: 1em; */
 }
 /*.textOverlay .sub_tit {
   font-size: 32px
@@ -193,12 +197,12 @@ body {
 } */
 
 .swiper-slide-active .textOverlay .tit {
-  transform: translateY(0%);
-  transition: transform 1s 0.5s;
+  /* transform: translateY(0%);
+  transition: transform 1s 0.5s; */
 }
 .swiper-slide-active .textOverlay .sub_tit {
-  transform: translateY(0%);
-  transition: transform 1s 0.5s;
+  /* transform: translateY(0%);
+  transition: transform 1s 0.5s; */
 }
 
   @media screen and (min-width: 1241px){
@@ -209,11 +213,11 @@ body {
 
   @media screen and (max-width: 1921px){
       #header .right_btn .ham_btn {
-        width: 34px;
-        height: 34px;
+        /* width: 34px;
+        height: 34px; */
       }
       #header .right_btn .ham_btn svg {
-          font-size: 24px;
+          /* font-size: 24px; */
       }
       /* #header .h_in{padding: 0 48px;} */
       #header nav .depth1 > li > a {
@@ -249,10 +253,10 @@ body {
         width: 100%;
       }
       #header .right_btn .ham_btn {
-        width: 30px;
+        /* width: 30px;
         height: 30px;
         margin-left: 20px;
-        display: block;
+        display: block; */
       }
       .sitemap .cont .top .close_btn {
       }
@@ -298,11 +302,11 @@ body {
 
 
       .sitemap .cont .logo{  
-        color: #fff;
+        /* color: #fff;
         font-size: 0.8rem;
         display: flex;
         line-height: 2.5;
-        font-weight: bold;
+        font-weight: bold; */
       }
       /* .logo{  
         color: #2d3e4e;
@@ -311,23 +315,23 @@ body {
         line-height: 2.5;
         font-weight: bold;
       } */
-      .logo span{
+      /* .logo span{
         padding-left: 0.2rem;
-      }
+      } */
     }
 
     @media screen and (max-width: 769px) {
-      #header .right_btn{margin-left: auto;}
+      /* #header .right_btn{margin-left: auto;} */
       #header .right_btn .ham_btn {
-        display: flex;
+        /* display: flex;
         align-items: center;
         justify-content: flex-end;
         width: 20px;
         margin-left: 24px;
-        font-size: 2rem;
+        font-size: 2rem; */
     }
       #header .right_btn .ham_btn svg {
-          font-size: 24px;
+          /* font-size: 24px; */
       }
       .swiper-slide img.pc {
         display: none;
