@@ -6,6 +6,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 import ContactUs from "@/components/ContactUs";
 import Header from "@/components/Header";
 import Email from "@/components/Email";
+import { ReactLenis, useLenis } from 'lenis/react'
 
 
 const geistSans = Geist({
@@ -19,8 +20,12 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+
   return (
-    <div
+    <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
       <Header />
@@ -34,6 +39,6 @@ export default function Home() {
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         
       </footer>
-    </div>
+    </ReactLenis>
   );
 }
