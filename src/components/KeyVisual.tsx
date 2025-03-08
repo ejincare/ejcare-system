@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay,Pagination } from 'swiper/modules';
+import "@/styles/keyvisual.css";
 
 import 'swiper/css';
 export default function KeyVisual() {
@@ -61,7 +62,7 @@ export default function KeyVisual() {
                 //     delay: 2500,
                 // }}
             >                
-                <SwiperSlide key={0}>
+                <SwiperSlide key={0} className='swiper-slide-keyvisual'>
                     <div className="imageContainer">
                         <Image
                             src={photos[0].url}
@@ -89,7 +90,7 @@ export default function KeyVisual() {
                         </div>                        
                     </div>
                 </SwiperSlide>
-                <SwiperSlide key={1}>
+                <SwiperSlide key={1} className='swiper-slide-keyvisual'>
                     <div className="imageContainer">
                         <Image
                             src={photos[2].url}

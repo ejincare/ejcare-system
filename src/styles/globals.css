@@ -33,38 +33,6 @@ body {
 }
 
 /* App.css */
-.swiper-container {
-  @apply max-w-full h-auto;
-}
-
-.swiper-slide {
-  @apply flex justify-center items-center text-lg bg-gray-200;
-}
-
-.swiper-slide img {
-  @apply w-full h-full object-cover max-h-96; /* max-h-96 is equivalent to max-height: 24rem (384px) */
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-.swiper {
-  position:absolute;
-/*  
-  height: 100vh; */
-}
-.swiper-slide-active img {
-  /* height: 100vh; */
-  animation: zoomIn 2s forwards;
-}
-.swiper-slide img {
-  /* max-height: 100vh; */
-}
 
 .imageContainer {
   position: relative;
