@@ -18,10 +18,9 @@ export default function Header() {
     return (
         <div id="header" className="py-4 px-4 sm:px-0 box-border border-b">
             <div className="h_in max-w-screen-xl mx-auto">
-                <h1 className="logo">
+                <h1 className="logo max-w-48">
                     <Link href={"/"} className="logo">
-                        <Image src={"/img/logo.png"} width={30} height={30} alt="" />
-                        <span>이진케어시스템</span>
+                        <Image src={"/img/logo2.png"} width={512} height={168} alt="" className="" />
                     </Link>
                 </h1>
                 <nav>
