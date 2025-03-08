@@ -11,18 +11,33 @@ export default function PhotoCarousel() {
           <Swiper
                 modules={[Autoplay,Pagination]}
                 loop={true} // Enable infinite looping
-                slidesPerView={3}
+                slidesPerView={1.2}
                 spaceBetween={10}
                 autoplay={{
                   delay: 1500,
                   disableOnInteraction: false
                 }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10
+                  },
+                  768: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20
+                  },
+                  1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 30
+                  }
+                }}
             >
-            <SwiperSlide key={-1}>
+            <SwiperSlide key={-1} className="drop-shadow-xs">
               <Image
               width={512}
               height={512}
               src="/1.jpg"
+              className="rounded-lg filter shadow-lg"
               alt=""
               />
             </SwiperSlide>
@@ -31,6 +46,7 @@ export default function PhotoCarousel() {
               width={512}
               height={512}
               src="/2.jpg"
+              className="rounded-lg filter shadow-xl"
               alt=""
               />
             </SwiperSlide>
@@ -39,6 +55,7 @@ export default function PhotoCarousel() {
               width={512}
               height={512}
               src="/3.jpg"
+              className="rounded-lg"
               alt=""
               />
             </SwiperSlide>
@@ -47,6 +64,7 @@ export default function PhotoCarousel() {
               width={512}
               height={512}
               src="/1.jpg"
+              className="rounded-lg"
               alt=""
               />
             </SwiperSlide>
@@ -55,6 +73,7 @@ export default function PhotoCarousel() {
               width={512}
               height={512}
               src="/2.jpg"
+              className="rounded-lg"
               alt=""
               />
             </SwiperSlide>
@@ -63,6 +82,7 @@ export default function PhotoCarousel() {
               width={512}
               height={512}
               src="/3.jpg"
+              className="rounded-lg"
               alt=""
               />
             </SwiperSlide>

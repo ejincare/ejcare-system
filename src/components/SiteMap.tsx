@@ -12,7 +12,7 @@ const SiteMap = ({siteMapClose}:any)  =>  {
     };
     return (
       <div className="cont">
-        <div id="mheader">
+        {/* <div id="mheader">
           <h1 className="logo">
             <Link href={"/"} className="logo">
                 <Image src={"/img/logo.png"} width={30} height={30} alt="" />
@@ -26,7 +26,7 @@ const SiteMap = ({siteMapClose}:any)  =>  {
                   </path>
               </svg>           
           </div>
-        </div>
+        </div> */}
 
         {/* <div className="top">
             <p className="en_tit notranslate">Site Map</p>
@@ -38,8 +38,12 @@ const SiteMap = ({siteMapClose}:any)  =>  {
             </div>
             
         </div> */}
-        <ul className="list">
-          <li className="depth1"></li>
+        <ul className="list mt-3 flex flex-col">
+          <li className="depth1 px-4 py-3">회사소개</li>
+          <li className="depth1 px-4 py-3">사업분야</li>
+          <li className="depth1 px-4 py-3">견적문의</li>
+          <li className="depth1 px-4 py-3">사업실적</li>
+          <li className="depth1 px-4 py-3">고객센터</li>
         </ul>
       </div>
     )

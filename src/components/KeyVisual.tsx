@@ -5,6 +5,7 @@ import { Autoplay,Pagination } from 'swiper/modules';
 import "@/styles/keyvisual.css";
 
 import 'swiper/css';
+import SearchSystem from './SearchSystem';
 export default function KeyVisual() {
 /*
     const photos = [
@@ -54,71 +55,78 @@ export default function KeyVisual() {
         },        
     ]
     return (
-        <section>               
-            <Swiper
-                modules={[Autoplay,Pagination]}
-                loop={true} // Enable infinite looping
-                // autoplay={{                    
-                //     delay: 2500,
-                // }}
-            >                
-                <SwiperSlide key={0} className='swiper-slide-keyvisual'>
-                    <div className="imageContainer">
-                        <Image
-                            src={photos[0].url}
-                            width={1280}
-                            height={960}
-                            alt={photos[0].alt}
-                            className='pc'
-                        />
-                        <Image
-                            src={photos[1].url}
-                            width={1280}
-                            height={960}
-                            alt={photos[1].alt}
-                            className='mobile'
-                        />
-                        <div className="textOverlay">
-                            <span className='sub_tit'>{photos[0].stitle}</span>
-                            <span className='tit'>{photos[0].ttitle}</span>
-                            <div className="more_btn">
-                                <a href="#" className="more" target="_self">
-                                    View More
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#ffffff"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
-                                </a>
-                            </div>
-                        </div>                        
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide key={1} className='swiper-slide-keyvisual'>
-                    <div className="imageContainer">
-                        <Image
-                            src={photos[2].url}
-                            width={600}
-                            height={400}
-                            alt={photos[2].alt}
-                            className='pc'
-                        />
-                        <Image
-                            src={photos[3].url}
-                            width={300}
-                            height={200}
-                            alt={photos[3].alt}
-                            className='mobile'
-                        />
-                        <div className="textOverlay">
-                            <span className='sub_tit'>{photos[2].stitle}</span>
-                            <span className='tit'>{photos[2].ttitle}</span>
-                            <div className="more_btn">
-                                <a href="#" className="more" target="_self">
-                                    View More
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
-                                </a>
+        <section className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-1 w-full lg:w-4/5">
+                <Swiper
+                    modules={[Autoplay,Pagination]}
+                    loop={true} // Enable infinite looping
+                    // autoplay={{                    
+                    //     delay: 2500,
+                    // }}
+                    className='rounded-xl sm:rounded-2xl filter shadow-lg'
+                >                
+                    <SwiperSlide key={0} className='swiper-slide-keyvisual'>
+                        <div className="imageContainer">
+                            <Image
+                                src={photos[0].url}
+                                width={1280}
+                                height={960}
+                                alt={photos[0].alt}
+                                className='pc'
+                            />
+                            <Image
+                                src={photos[1].url}
+                                width={1280}
+                                height={960}
+                                alt={photos[1].alt}
+                                className='mobile'
+                            />
+                            <div className="textOverlay leading-[1.3]">
+                                <span className='sub_tit text-xl sm:text-2xl'>{photos[0].stitle}</span>
+                                <span className='tit text-2xl sm:text-4xl'>{photos[0].ttitle}</span>
+                                <div className="more_btn">
+                                    <a href="#" className="more" target="_self">
+                                        View More
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#ffffff"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>                        
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide key={1} className='swiper-slide-keyvisual'>
+                        <div className="imageContainer">
+                            <Image
+                                src={photos[2].url}
+                                width={600}
+                                height={400}
+                                alt={photos[2].alt}
+                                className='pc'
+                            />
+                            <Image
+                                src={photos[3].url}
+                                width={300}
+                                height={200}
+                                alt={photos[3].alt}
+                                className='mobile'
+                            />
+                            <div className="textOverlay">
+                                <span className='sub_tit'>{photos[2].stitle}</span>
+                                <span className='tit'>{photos[2].ttitle}</span>
+                                <div className="more_btn">
+                                    <a href="#" className="more" target="_self">
+                                        View More
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>                  
+                    </SwiperSlide>
+                </Swiper>                  
+            </div>
+            <div className="flex-1 w-full lg:w-1/5 rounded-xl lg:rounded-2xl overflow-hidden border border-[#d3d3d3]">
+                <SearchSystem></SearchSystem>
+                aaa
+            </div>
         </section>
     )
 }

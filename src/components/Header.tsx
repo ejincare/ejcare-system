@@ -16,11 +16,11 @@ export default function Header() {
     };
 
     return (
-        <div id="header" className="py-4 px-4 sm:px-0 box-border border-b">
+        <div id="header" className="py-3 px-3 sm:px-0 box-border">
             <div className="h_in max-w-screen-xl mx-auto">
-                <h1 className="logo max-w-48">
+                <h1 className="logo max-w-[125] sm:max-w-48">
                     <Link href={"/"} className="logo">
-                        <Image src={"/img/logo2.png"} width={512} height={168} alt="" className="" />
+                        <Image src={"/img/logo6.jpg"} width={512} height={168} alt="" className="" />
                     </Link>
                 </h1>
                 <nav>
@@ -29,7 +29,7 @@ export default function Header() {
                 <div className="right_btn justify-end" onClick={SiteMapOpen}>
                     <HamburgerBtn />
                 </div>
-                <div className={"sitemap" + (isMenu ? " on":"")}>
+                <div className={"sitemap mt-[70]" + (isMenu ? " on":"")}>
                     <SiteMap siteMapClose={SiteMapOpen}/>
                 </div>
             </div>
