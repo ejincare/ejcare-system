@@ -6,6 +6,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function PhotoCarousel() {
   SwiperCore.use([Autoplay,Pagination]);
+  const data = [
+    {
+      src: "/1.jpg",
+      alt: "Image 1",
+    }, {
+      src: "/2.jpg",
+      alt: "Image 2",
+    }, {
+      src: "/3.jpg",
+      alt: "Image 3",
+    }, {
+      src: "/1.jpg",
+      alt: "Image 4",
+    }, {
+      src: "/2.jpg",
+      alt: "Image 5",
+    }, {
+      src: "/3.jpg",
+      alt: "Image 6",
+    }
+  ]
     return (
         <section className="justify-center w-full text-center">
           <Swiper
@@ -32,60 +53,17 @@ export default function PhotoCarousel() {
                   }
                 }}
             >
-            <SwiperSlide key={-1} className="drop-shadow-xs">
-              <Image
-              width={512}
-              height={512}
-              src="/1.jpg"
-              className="rounded-lg filter shadow-lg"
-              alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key={0}>
-              <Image
-              width={512}
-              height={512}
-              src="/2.jpg"
-              className="rounded-lg filter shadow-xl"
-              alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key={1}>
-              <Image
-              width={512}
-              height={512}
-              src="/3.jpg"
-              className="rounded-lg"
-              alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key={2}>
-              <Image
-              width={512}
-              height={512}
-              src="/1.jpg"
-              className="rounded-lg"
-              alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key={3}>
-              <Image
-              width={512}
-              height={512}
-              src="/2.jpg"
-              className="rounded-lg"
-              alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key={4}>
-              <Image
-              width={512}
-              height={512}
-              src="/3.jpg"
-              className="rounded-lg"
-              alt=""
-              />
-            </SwiperSlide>
+              {data.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    width={512}
+                    height={512}
+                    src={item.src}
+                    className="rounded-lg"
+                    alt={item.alt}
+                  />
+                </SwiperSlide>
+              ))}
           </Swiper>
         </section>
     )

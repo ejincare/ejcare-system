@@ -125,9 +125,12 @@ export default function KeyVisual() {
                     </SwiperSlide>
                 </Swiper>                  
             </div>
-            <div className="flex-1 w-full lg:w-1/5 rounded-xl lg:rounded-2xl overflow-hidden border border-[#d3d3d3]">
-                <SearchSystem></SearchSystem>
-                aaa
+            <div className="flex-1 w-full lg:w-1/5 flex flex-col gap-4">
+                <SearchSystem url='/search' title='조회시스템' />
+                <SearchSystem url='/search' title='조회시스템' />
+                <SearchSystem url='/search' title='조회시스템' />
+                <SearchSystem url='/search' title='조회시스템' />
+                
             </div>
         </section>
     )
