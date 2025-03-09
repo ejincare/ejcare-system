@@ -4,7 +4,11 @@ import { useState } from "react";
 import React from "react";
 
 
-const SiteMap = ({siteMapClose}:any)  =>  {
+interface SiteMapProps {
+  siteMapClose: (isSiteMap: boolean) => void;
+}
+
+const SiteMap: React.FC<SiteMapProps> = ({ siteMapClose }) => {
     const [isSiteMap, setIsSiteMap] = useState(true);
     function SiteMapClose () {
       setIsSiteMap((isSiteMap) => !isSiteMap)
@@ -12,32 +16,6 @@ const SiteMap = ({siteMapClose}:any)  =>  {
     };
     return (
       <div className="cont">
-        {/* <div id="mheader">
-          <h1 className="logo">
-            <Link href={"/"} className="logo">
-                <Image src={"/img/logo.png"} width={30} height={30} alt="" />
-                <span>이진케어시스템</span>
-            </Link>
-          </h1>
-
-          <div className="close_btn" onClick={SiteMapClose}>            
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                  <path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z">
-                  </path>
-              </svg>           
-          </div>
-        </div> */}
-
-        {/* <div className="top">
-            <p className="en_tit notranslate">Site Map</p>
-            <div className="sitemap_logo">
-              <Link href={"/"} className="logo">
-                <Image src={"/img/logo.png"} width={30} height={30} alt="" />
-                <span>이진케어시스템</span>
-              </Link>
-            </div>
-            
-        </div> */}
         <ul className="list mt-3 flex flex-col">
           <li className="depth1 px-4 py-3">회사소개</li>
           <li className="depth1 px-4 py-3">사업분야</li>

@@ -7,6 +7,9 @@ import ContactUs from "@/components/ContactUs";
 import Header from "@/components/Header";
 import Email from "@/components/Email";
 import { ReactLenis, useLenis } from 'lenis/react'
+import IconBox from "@/components/IconBox";
+import IconBoxWrap from "@/components/IconBoxWrap";
+import Hline from "@/components/Hline";
 
 
 const geistSans = Geist({
@@ -33,6 +36,8 @@ export default function Home() {
         <KeyVisual />
         <MainText />
         <PhotoCarousel />
+        <Hline />
+        <IconBoxWrap />
         <ContactUs />
         <Email />
       </main>
