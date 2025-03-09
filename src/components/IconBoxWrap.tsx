@@ -27,7 +27,7 @@ export default function IconBoxWrap() {
         }
     ]
     return (
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 min-h-48 text-gray-800 text-2xl font-bold">
+        <section className="max-w-screen-xl mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 min-h-48 text-gray-800 text-2xl font-bold">
             {iconBoxCon.map((iconBoxCon, index) => (
                 <IconBox key={index} iconPath={iconBoxCon.iconPath} title={iconBoxCon.title} description={iconBoxCon.description} />
             ))}

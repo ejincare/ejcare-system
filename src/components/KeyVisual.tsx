@@ -57,7 +57,7 @@ export default function KeyVisual() {
         },        
     ]
     return (
-        <section className="flex flex-col lg:flex-row gap-4">
+        <section className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4">
             <div className="flex-1 w-full lg:w-4/5">
                 <Swiper
                     modules={[Autoplay,Pagination]}
@@ -125,12 +125,8 @@ export default function KeyVisual() {
                     </SwiperSlide>
                 </Swiper>                  
             </div>
-            <div className="flex-1 w-full lg:w-1/5 flex flex-col gap-4">
+            <div className="w-full lg:w-1/5">
                 <SearchSystem url='/search' title='조회시스템' />
-                <SearchSystem url='/search' title='조회시스템' />
-                <SearchSystem url='/search' title='조회시스템' />
-                <SearchSystem url='/search' title='조회시스템' />
-                
             </div>
         </section>
     )

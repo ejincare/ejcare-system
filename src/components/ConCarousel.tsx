@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
-export default function PhotoCarousel() {
+export default function ConCarousel() {
   SwiperCore.use([Autoplay,Pagination]);
   const data = [
     {
