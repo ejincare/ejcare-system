@@ -1,28 +1,10 @@
-import { faker } from '@faker-js/faker';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay,Pagination } from 'swiper/modules';
-import "@/styles/keyvisual.css";
 
 import 'swiper/css';
 import SearchSystem from './SearchSystem';
 export default function KeyVisual() {
-/*
-    const photos = [
-        {
-            url: faker.image.urlPicsumPhotos({ width: 128, height: 128 }),
-            alt: faker.word.adjective(100)
-        },
-        {
-            url: faker.image.urlPicsumPhotos({ width: 128, height: 128 }),
-            alt: faker.word.adjective(100)
-        },
-        {
-            url: faker.image.urlPicsumPhotos({ width: 128, height: 128 }),
-            alt: faker.word.adjective(100)
-        },
-    ]
-        */
     const photos = [
         {
             url: '/main_visual01.jpg',

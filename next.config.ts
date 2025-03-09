@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  reactStrictMode: true,
+  reactStrictMode: false,
 
   images: {
     domains: ["cloudflare-ipfs.com", "https://fastly.picsum.photos", "https://loremflickr.com", "https://picsum.photos"], // 허용할 도메인 목록을 지정

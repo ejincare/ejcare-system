@@ -1,19 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 import React from "react";
 
-
-interface SiteMapProps {
-  siteMapClose: (isSiteMap: boolean) => void;
-}
-
-const SiteMap: React.FC<SiteMapProps> = ({ siteMapClose }) => {
-    const [isSiteMap, setIsSiteMap] = useState(true);
-    function SiteMapClose () {
-      setIsSiteMap((isSiteMap) => !isSiteMap)
-      siteMapClose(isSiteMap);
-    };
+const SiteMap = () => {
     return (
       <div className="cont">
         <ul className="list mt-3 flex flex-col">

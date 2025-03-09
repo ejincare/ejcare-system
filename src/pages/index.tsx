@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import KeyVisual from "@/components/KeyVisual";
 import MainText from "@/components/MainText";
@@ -6,8 +5,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 import ContactUs from "@/components/ContactUs";
 import Header from "@/components/Header";
 import Email from "@/components/Email";
-import { ReactLenis, useLenis } from 'lenis/react'
-import IconBox from "@/components/IconBox";
+import { ReactLenis } from 'lenis/react'
 import IconBoxWrap from "@/components/IconBoxWrap";
 import Hline from "@/components/Hline";
 import ConPartner from "@/components/ConPartner";
@@ -24,10 +22,6 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
-
   return (
     <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}

@@ -11,9 +11,6 @@ export default function ShareBtn() {
   function shareNaverBlog()  {
 
   }
-  function shareKakao()  {
-
-  }
   function shareLink()  {
 
   }

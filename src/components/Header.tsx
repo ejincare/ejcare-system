@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navigation } from "swiper/modules";
 import Navigator from "./Navigator";
-import ShareBtn from "./ShareBtn";
 import HamburgerBtn from "./HamburgerBtn";
 import SiteMap from "./SiteMap";
 import { useState } from "react";
@@ -32,7 +30,7 @@ export default function Header() {
                 <div className={`sitemap fixed xl:hidden z-[999] mt-12 sm:mt-16 left-0 top-0 w-full h-screen bg-[#2d3e4e] text-white transition-opacity duration-400 ${
                     isMenu ? "opacity-100 pointer-events-visible" : "opacity-0 pointer-events-none"
                     }`}>
-                    <SiteMap siteMapClose={SiteMapOpen}/>
+                    <SiteMap />
                 </div>
             </div>
         </div>

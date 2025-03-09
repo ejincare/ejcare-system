@@ -1,4 +1,3 @@
-
 .swiper-container {
     @apply max-w-full h-auto;
 }
@@ -21,13 +20,7 @@
 }
 .swiper {
     position:absolute;
-/*  
-height: 100vh; */
 }
 .swiper-slide-active.swiper-slide-keyvisual img {
-/* height: 100vh; */
     animation: zoomIn 2s forwards;
-}
-.swiper-slide img {
-    /* max-height: 100vh; */
 }

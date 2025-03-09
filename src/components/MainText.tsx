@@ -28,7 +28,7 @@ export default function MainText() {
       const viewportCenterY = viewportHeight * (1/2);
 
       // 요소의 상단과 뷰포트 중앙 간의 거리 계산
-      const distanceToCenter = rect.top - viewportCenterY;      
+      // const distanceToCenter = rect.top - viewportCenterY;      
       
       // 비율 계산 (0: 화면 아래, 100: 중앙)
       const normalizedDistance = ((viewportHeight) - rect.top) * (100 / viewportCenterY) - (rect.height / 2);
