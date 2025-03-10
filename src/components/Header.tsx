@@ -18,7 +18,7 @@ export default function Header() {
             <div className="h_in max-w-screen-xl mx-auto">
                 <h1 className="flex logo max-w-[125] sm:max-w-48 ">
                     <Link href={"/"} className="logo">
-                        <Image src={"/img/logo6.jpg"} width={512} height={168} alt="" className="h-[26px] md:h-[31px] aspect-auto" />
+                        <Image src={"/img/logo6.jpg"} width={512} height={168} alt="" className="max-w-[125] sm:max-w-48 h-auto aspect-auto" />
                     </Link>
                 </h1>
                 <nav>
