@@ -27,7 +27,7 @@ export default function Home() {
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
       <Header />
-      <main className="box-border px-3 xl:px-0">
+      <main className="box-border px-5 xl:px-0">
         <KeyVisual />
         <MainText />
         <PhotoCarousel />
