@@ -8,7 +8,7 @@ interface SearchSystemProps {
 
 export default function SearchSystem({url, title}: SearchSystemProps) {
     return (
-        <section className="h-full bg-gray-100 p-4 rounded-xl lg:rounded-2xl overflow-hidden border border-[#d3d3d3] font-bold text-xl text-teal-600">
+        <section className="h-full bg-[#f6f7fa] p-4 rounded-xl lg:rounded-2xl overflow-hidden font-bold text-xl text-[#383940]">
           <Link href={url}>
             {title}
           </Link>

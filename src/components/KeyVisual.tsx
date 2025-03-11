@@ -108,7 +108,7 @@ export default function KeyVisual() {
                 </Swiper>                  
             </div>
             <div className="w-full lg:w-1/5">
-                <SearchSystem url='/search' title='조회시스템' />
+                <SearchSystem url='/search' title='이진케어 조회시스템' />
             </div>
         </section>
     )
