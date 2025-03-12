@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import KeyVisual from "@/components/KeyVisual";
+//import KeyVisual from "@/components/KeyVisual";
 import MainText from "@/components/MainText";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import ContactUs from "@/components/ContactUs";
@@ -27,6 +27,7 @@ export default function Home() {
     <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
+      <Header />
       <MainVisualWrap />      
       <main className="box-border px-5 xl:px-0">
         <MainText />

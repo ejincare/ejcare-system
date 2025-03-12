@@ -114,9 +114,33 @@ body {
 }
 }
 
-.swiper-slide-active.swiper-slide-keyvisual img {
+@-webkit-keyframes zoom-a {
+	0% { background-size: 100% auto; }
+	100% { background-size: 120% auto; }
+}
+@-moz-keyframes zoom-a {
+	0% { background-size: 100% auto; }
+	100% { background-size: 120% auto; }
+}
+@-o-keyframes zoom-a {
+	0% { background-size: 100% auto; }
+	100% { background-size: 120% auto; }
+}
+@keyframes zoom-a {
+	0% { background-size: 100% auto; }
+	100% { background-size: 120% auto; }
+}
+.type-a {
+  -webkit-animation: zoom-a 10s linear infinite none; /* Safari 4+ */
+  -moz-animation:    zoom-a 10s linear infinite none; /* Fx 5+ */
+  -o-animation:      zoom-a 10s linear infinite none; /* Opera 12+ */
+  animation:         zoom-a 10s linear infinite none; /* IE 10+, Fx 29+ */
+}
+/*
+.swiper-slide-active.swiper-slide-keyvisual .bg-cover.h-screen {
   animation: zoomIn 2s forwards;
 }
+  */
 /* App.css */
 
     /* #header {

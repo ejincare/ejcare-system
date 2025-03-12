@@ -1,7 +1,3 @@
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay,Pagination } from 'swiper/modules';
-
 import 'swiper/css';
 import SearchSystem from './SearchSystem';
 export default function KeyVisual() {

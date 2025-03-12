@@ -14,23 +14,27 @@ export default function Header() {
     };
 
     return (
-        <div id="header" className="py-3 px-5 sm:px-0 my-0 box-border">
-            <div className="h_in max-w-screen-xl mx-auto">
-                <h1 className="flex logo max-w-[125px] sm:max-w-48 ">
-                    <Link href={"/"} className="logo">
-                        <Image src={"/img/logo6.jpg"} width={512} height={168} alt="" />
-                    </Link>
-                </h1>
-                <nav>
-                    <Navigator />
-                </nav>
-                <div className={`right_btn justify-end ${isMenu ? 'on': ''}`} onClick={SiteMapOpen}>
-                    <HamburgerBtn />
-                </div>
-                <div className={`sitemap fixed xl:hidden z-[999] mt-12 sm:mt-16 left-0 top-0 w-full h-screen bg-[#2d3e4e] text-white transition-opacity duration-400 ${
-                    isMenu ? "opacity-100 pointer-events-visible" : "opacity-0 pointer-events-none"
-                    }`}>
-                    <SiteMap />
+        <div className="max-w-screen-xl mx-auto justify-center w-full text-center">
+            <div className="absolute z-[2]">
+                <div id="header" className="py-3 px-5 sm:px-0 my-0 box-border">
+                    <div className="h_in max-w-screen-xl mx-auto">
+                        <h1 className="flex logo max-w-[125px] sm:max-w-48 ">
+                            <Link href={"/"} className="logo">
+                                <Image src={"/img/logo6.jpg"} width={512} height={168} alt="" />
+                            </Link>
+                        </h1>
+                        <nav>
+                            <Navigator />
+                        </nav>
+                        <div className={`right_btn justify-end ${isMenu ? 'on': ''}`} onClick={SiteMapOpen}>
+                            <HamburgerBtn />
+                        </div>
+                        <div className={`sitemap fixed xl:hidden z-[999] mt-12 sm:mt-16 left-0 top-0 w-full h-screen bg-[#2d3e4e] text-white transition-opacity duration-400 ${
+                            isMenu ? "opacity-100 pointer-events-visible" : "opacity-0 pointer-events-none"
+                            }`}>
+                            <SiteMap />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
