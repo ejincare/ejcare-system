@@ -34,7 +34,7 @@ export default function Navigator() {
       <ul className="depth1">
         {menuList.map((menu) => (
           <li className="" key={menu.id}>
-            <Link href={menu.href} >
+            <Link href={menu.href} className="text-white">
               {menu.title}
             </Link>
           </li>
