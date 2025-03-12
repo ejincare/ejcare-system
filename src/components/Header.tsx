@@ -15,7 +15,7 @@ export default function Header() {
 
     return (
         <div className="max-w-screen-xl mx-auto justify-center w-full text-center">
-            <div className="absolute z-[2]">
+            <div className="absolute w-full z-[2]">
                 <div id="header" className="py-3 px-5 sm:px-0 my-0 box-border">
                     <div className="h_in max-w-screen-xl mx-auto">
                         <h1 className="flex logo max-w-[125px] sm:max-w-48 ">
