@@ -9,6 +9,7 @@ import { ReactLenis } from 'lenis/react'
 import IconBoxWrap from "@/components/IconBoxWrap";
 import Hline from "@/components/Hline";
 import ConPartner from "@/components/ConPartner";
+import MainVisualWrap from "@/components/MainVisualWrap";
 
 
 const geistSans = Geist({
@@ -26,9 +27,8 @@ export default function Home() {
     <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
-      <Header />
+      <MainVisualWrap />      
       <main className="box-border px-5 xl:px-0">
-        <KeyVisual />
         <MainText />
         <PhotoCarousel />
         <Hline />

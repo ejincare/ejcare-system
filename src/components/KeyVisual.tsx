@@ -41,7 +41,7 @@ export default function KeyVisual() {
     return (
         <section className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4">
             <div className="flex-1 w-full lg:w-4/5">
-                <Swiper
+                {/* <Swiper
                     modules={[Autoplay,Pagination]}
                     loop={true} // Enable infinite looping
                     // autoplay={{                    
@@ -105,10 +105,10 @@ export default function KeyVisual() {
                             </div>
                         </div>
                     </SwiperSlide>
-                </Swiper>                  
+                </Swiper>                   */}
             </div>
             <div className="w-full lg:w-1/5">
-                <SearchSystem url='/search' title='이진케어 조회시스템' />
+                <SearchSystem url='/search' title='이진케어 조회시스템' description='일정 확인, 건물 민원 관리 기능을 간편하게 이용할 수 있습니다.' />
             </div>
         </section>
     )
