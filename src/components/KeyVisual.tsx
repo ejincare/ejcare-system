@@ -1,7 +1,7 @@
 import 'swiper/css';
 import SearchSystem from './SearchSystem';
 export default function KeyVisual() {
-    const photos = [
+    /*const photos = [
         {
             url: '/main_visual01.jpg',
             alt: '/main_visual01.jpg',
@@ -33,7 +33,7 @@ export default function KeyVisual() {
             stitle: '이진케어시스템',
             ttitle: '이진케어시스템',
         },        
-    ]
+    ]*/
     return (
         <section className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4">
             <div className="flex-1 w-full lg:w-4/5">
