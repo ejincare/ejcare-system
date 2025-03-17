@@ -57,7 +57,7 @@ export default function MainVisualWrap() {
                         <div className="flex-1 w-full lg:w-4/5">
                             <div className="textOverlay flex flex-col items-start justify-center absolute top-0 right-0 z-20 w-1/2 h-full pl-12 leading-[1.3]">
                                 <span className='sub_tit text-xl sm:text-2xl text-white'>{photos[0].stitle}</span>
-                                <span className='tit text-2xl sm:text-4xl text-white mt-2'>{photos[0].ttitle}</span>
+                                <span className='tit text-2xl sm:text-4xl text-white mt-1'>{photos[0].ttitle}</span>
                                 <div className="more_btn">
                                     <a href="#" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
                                          견적 확인하기

@@ -58,10 +58,10 @@ export default function PhotoCarousel() {
                 loop={true} // Enable infinite looping
                 slidesPerView={1.2}
                 spaceBetween={10}
-                autoplay={{
-                  delay: 1500,
-                  disableOnInteraction: false
-                }}
+                //autoplay={{
+                //  delay: 1500,
+                //  disableOnInteraction: false
+                //}}
                 breakpoints={{
                   640: {
                     slidesPerView: 1.5,
@@ -79,14 +79,14 @@ export default function PhotoCarousel() {
             >
               {data.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[400px] lg:max-h-[332px] bg-[#f5f5f8]">
-                    <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] text-[#282828] sm:w-auto text-left">
-                      <h4 className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0">{item.name}</h4>
+                  <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[400px] lg:max-h-[332px] bg-[#282828]">
+                    <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
+                      <h4 className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0 text-[#e68600]">{item.name}</h4>
                       <div className="items-center justify-between lg:mt-10 lg:p-0 pt-5">
-                        <div className="text-base">{item.floor}</div>
+                        <div className="text-base text-[#d1d1d6]">{item.floor}</div>
                         <div className="text-xs text-gray-400">({item.area})</div>
                       </div>
-                      <div className="grid grid-cols-2 lg:grid-cols-1 mt-5 text-gray-500 text-base">{item.con}</div>
+                      <div className="grid grid-cols-2 lg:grid-cols-1 mt-5 text-[#d1d1d6] text-base">{item.con}</div>
                     </div>
                     <Image
                       width={512}
