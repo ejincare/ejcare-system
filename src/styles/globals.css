@@ -452,6 +452,8 @@ body {
 
     .type-a1 {
       background-image: url(/main_visual01_m.jpg);
+      /* background-position: center bottom; */
+      height: 100%;
     }
     .type-a2 {
       background-image: url(/main_visual02_m.jpg);

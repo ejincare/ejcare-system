@@ -46,11 +46,11 @@ export default function MainText() {
     return (
         <section className="px-2 py-24 sm:px-8 sm:py-8 md:py-32 xl:py-24 justify-center w-full text-center">
           <h2 className="text-black text-2xl text-pretty fade-in-left my-4">
-            반도체 설계업체인 마벨테크놀로지의 <br className="hidden sm:block" />실적이 시장 전망치를 소폭 웃돌았지만 <br className="hidden sm:block" />투자자들의 높은 기대치에는 부응하는<br/>건물을 사랑하는 기업 
+             건물을 가장 잘 아는 기업, <br className="hidden sm:block" />설비에 가장 전문적인 기업
           </h2>
             <p ref={ref} className="inline-block relative whitespace-break-spaces px-30 sm:px-0 sm:whitespace-nowrap text-gray-300 text-[28px] md:text-[48px] font-bold leading-[140%] leading-2 ">
               (주)이진케어시스템
-              <span className="absolute left-0 top-0 w-0 h-full text-[28px] md:text-[48px] font-bold leading-[140%] text-[#131f36] overflow-hidden whitespace-nowrap"
+              <span className="absolute left-0 top-0 w-0 h-full text-[28px] md:text-[48px] font-bold leading-[140%] text-[#e68600] overflow-hidden whitespace-nowrap"
               style={{width: `${distance}%`}}>
               (주)이진케어시스템
               </span>
