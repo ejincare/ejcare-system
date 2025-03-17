@@ -49,10 +49,10 @@ export default function MainText() {
             반도체 설계업체인 마벨테크놀로지의 <br className="hidden sm:block" />실적이 시장 전망치를 소폭 웃돌았지만 <br className="hidden sm:block" />투자자들의 높은 기대치에는 부응하는<br/>건물을 사랑하는 기업 
           </h2>
             <p ref={ref} className="inline-block relative whitespace-break-spaces px-30 sm:px-0 sm:whitespace-nowrap text-gray-300 text-[28px] md:text-[48px] font-bold leading-[140%] leading-2 ">
-              (주) 이진 케어 시스템이 함께합니다
+              (주)이진케어시스템
               <span className="absolute left-0 top-0 w-0 h-full text-[28px] md:text-[48px] font-bold leading-[140%] text-[#131f36] overflow-hidden whitespace-nowrap"
               style={{width: `${distance}%`}}>
-              (주) 이진 케어 시스템이 함께합니다
+              (주)이진케어시스템
               </span>
             </p> 
             {/* <p>{distance}</p>          */}
