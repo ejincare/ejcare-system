@@ -12,43 +12,64 @@ export default function PhotoCarousel() {
       floor: "지하 2층 ~ 지상 10층",
       area: "연면적 31,966.29m2",
       con: "상주, 미화관리",
-      src: "/1.jpg",
-      alt: "Image 1",
+      src: "/signaturegwanggyo.jpg",
+      alt: "signaturegwanggyo",
     }, {
       name: "경기 안성시 E건물",
       floor: "지하 3층 ~ 지상 29층",
       area: "연면적 69,384.00m2",
       con: "상주, 미화관리",      
-      src: "/2.jpg",
-      alt: "Image 2",
+      src: "/e-annsung.png",
+      alt: "e-annsung",
     }, {
       name: "경기 여주시 S건물",
       floor: "지하 2층 ~ 지상 20층",
       area: "연면적 57,569.7843m2",
       con: "상주, 미화관리",        
-      src: "/1.jpg",
-      alt: "Image 4",
+      src: "/yeojucenterville.png",
+      alt: "yeojucenterville",
     }, {
       name: "경기 이천시 I건물",
       floor: "지하 1층 ~ 지상 15층",
       area: "연면적 59,762.577m2",
       con: "상주, 미화관리",        
-      src: "/2.jpg",
-      alt: "Image 5",
+      src: "/lanfastiam.png",
+      alt: "lanfastiam",
     }, {
       name: "서울시 동대문구 H건물",
       floor: "지하 6층 ~ 지상 20층",
       area: "연면적 50,203.2415m2",
       con: "상주, 미화관리",        
-      src: "/3.jpg",
-      alt: "Image 6",
+      src: "/hillstatejangan.png",
+      alt: "hillstatejangan",
     }, {
       name: "경기 구리시 S건물",
       floor: "지하 2층 ~ 지상 27층",
       area: "연면적 15,472.80m2",
       con: "상주, 미화관리",        
-      src: "/3.jpg",
-      alt: "Image 6",
+      src: "/guriterrace.jpg",
+      alt: "guriterrace",
+    }, {
+      name: "경기 부천시 H건물",
+      floor: "주상복합/2개동 160세대 지하 5층 ~ 지상 29층",
+      area: "연면적 25,676.98m2",
+      con: "상주, 미화관리",        
+      src: "/bucheonhyundai.png",
+      alt: "bucheonhyundai",
+    }, {
+      name: "경기 시흥시 H건물",
+      floor: "지하 5층 ~ 지상 10층",
+      area: "연면적 17,106.5375m2",
+      con: "상주, 미화관리",        
+      src: "/hillstatesiheung.jpg",
+      alt: "hillstatesiheung",
+    }, {
+      name: "경기 의정부시 H건물",
+      floor: "지하 2층 ~ 지상 15층",
+      area: "연면적 1,123.77m2",
+      con: "상주, 미화관리",        
+      src: "/passiblestation.png",
+      alt: "passiblestation",
     }
   ]
     return (
@@ -58,10 +79,10 @@ export default function PhotoCarousel() {
                 loop={true} // Enable infinite looping
                 slidesPerView={1.2}
                 spaceBetween={10}
-                autoplay={{
-                  delay: 1500,
-                  disableOnInteraction: false
-                }}
+                //autoplay={{
+                //  delay: 1500,
+                //  disableOnInteraction: false
+                //}}
                 breakpoints={{
                   640: {
                     slidesPerView: 1.5,
@@ -88,13 +109,15 @@ export default function PhotoCarousel() {
                       </div>
                       <div className="grid grid-cols-2 lg:grid-cols-1 mt-5 text-[#d1d1d6] text-base">{item.con}</div>
                     </div>
-                    <Image
-                      width={512}
-                      height={512}
-                      src={item.src}
-                      className="flex-none w-full sm:w-20 w-12 h-12 sm:h-50"
-                      alt={item.alt}
-                    />
+                    <div>
+                      <Image
+                        width={512}
+                        height={512}
+                        src={item.src}
+                        className="flex-none w-full sm:w-20 w-12 h-12 sm:h-50"
+                        alt={item.alt}
+                      />
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
