@@ -51,7 +51,7 @@ export default function PhotoCarousel() {
       alt: "guriterrace",
     }, {
       name: "경기 부천시 H건물",
-      floor: "주상복합/2개동 160세대 지하 5층 ~ 지상 29층",
+      floor: "지하 5층 ~ 지상 29층",
       area: "연면적 25,676.98m2",
       con: "상주, 미화관리",        
       src: "/bucheonhyundai.png",
