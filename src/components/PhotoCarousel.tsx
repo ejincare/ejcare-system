@@ -79,10 +79,10 @@ export default function PhotoCarousel() {
                 loop={true} // Enable infinite looping
                 slidesPerView={1.2}
                 spaceBetween={10}
-                //autoplay={{
-                //  delay: 1500,
-                //  disableOnInteraction: false
-                //}}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false
+                }}
                 breakpoints={{
                   640: {
                     slidesPerView: 1.5,
