@@ -10,7 +10,6 @@ import IconBoxWrap from "@/components/IconBoxWrap";
 import Hline from "@/components/Hline";
 import ConPartner from "@/components/ConPartner";
 import MainVisualWrap from "@/components/MainVisualWrap";
-import SearchSystem from "@/components/SearchSystem";
 
 
 const geistSans = Geist({
@@ -31,7 +30,6 @@ export default function Home() {
       <Header />
       <MainVisualWrap />      
       <main className="box-border px-5 xl:px-0">
-        {/* <SearchSystem url={""} title={"조회 시스템"} description={"관리비 조회 등 간편하게 이용할 수 있습니다"} /> */}
         <MainText />
         <PhotoCarousel />
         <Hline />
