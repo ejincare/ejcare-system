@@ -1,14 +1,46 @@
+import Link from "next/link";
 import React from "react";
 
 const SiteMap = () => {
+
+  const menuList = [
+      {
+        id: '1',
+        title: '회사소개',
+        href: './company'
+      },
+      {
+        id: '2',
+        title: '사업분야',
+        href: './business'
+      },
+      {
+        id: '3',
+        title: '견적문의',
+        href: './inquiry'
+      },
+      {
+        id: '4',
+        title: '사업실적',
+        href: './businessPerformance'
+      },
+      {
+        id: '5',
+        title: '고객센터',
+        href: './customerService'
+      },            
+    ] 
+
     return (
       <div className="cont">
         <ul className="list mt-3 flex flex-col text-left">
-          <li className="depth1 px-4 py-3">회사소개</li>
-          <li className="depth1 px-4 py-3">사업분야</li>
-          <li className="depth1 px-4 py-3">견적문의</li>
-          <li className="depth1 px-4 py-3">사업실적</li>
-          <li className="depth1 px-4 py-3">고객센터</li>
+          {menuList.map((menu) => (
+            <li className="depth1 px-4 py-3" key={menu.id}>
+              <Link href={menu.href} className="text-white">
+                {menu.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     )
