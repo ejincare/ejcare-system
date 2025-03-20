@@ -27,7 +27,7 @@ export default function Home() {
     <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
-      <Header />
+      <Header pageName={"main"}/>
       <MainVisualWrap />      
       <main className="box-border px-5 xl:px-0">
         <MainText />

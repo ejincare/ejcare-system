@@ -6,27 +6,27 @@ export default function Navigator() {
       {
         id: '1',
         title: '회사소개',
-        href: './'
+        href: '../company'
       },
       {
         id: '2',
         title: '사업분야',
-        href: './'
+        href: '../business'
       },
       {
         id: '3',
         title: '견적문의',
-        href: './'
+        href: '../inquiry'
       },
       {
         id: '4',
         title: '사업실적',
-        href: './'
+        href: '../businessPerformance'
       },
       {
         id: '5',
         title: '고객센터',
-        href: './'
+        href: '../customerService'
       },            
     ]
 

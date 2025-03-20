@@ -97,10 +97,11 @@ export default function PhotoCarousel() {
                     spaceBetween: 30
                   }
                 }}
+                
             >
               {data.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[400px] lg:max-h-[332px] bg-[#282828]">
+                <SwiperSlide key={index} >
+                  <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[400px] lg:max-h-[400px] bg-[#282828]">
                     <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
                       <h4 className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0 text-[#e68600]">{item.name}</h4>
                       <div className="items-center justify-between lg:mt-10 lg:p-0 pt-5">
