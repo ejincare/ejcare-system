@@ -36,7 +36,7 @@ const SiteMap = () => {
         <ul className="list mt-3 flex flex-col text-left">
           {menuList.map((menu) => (
             <li className="depth1 px-4 py-3" key={menu.id}>
-              <Link href={menu.href} className="text-white">
+              <Link href={menu.href} className="text-white block">
                 {menu.title}
               </Link>
             </li>

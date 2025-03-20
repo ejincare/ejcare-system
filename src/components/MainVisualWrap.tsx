@@ -49,7 +49,7 @@ export default function MainVisualWrap() {
               delay: 2500,
               disableOnInteraction: false
             }}
-            className='filter shadow-lg !h-[70vh] sm:!h-[100vh]'
+            className='filter shadow-lg !h-[70vh]'
         >
             <SwiperSlide key={0} className='swiper-slide-keyvisual'>
                 <div className="bg-cover type-a1 bg-no-repeat">                   
