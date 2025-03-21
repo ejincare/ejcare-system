@@ -8,7 +8,7 @@ import { useState } from "react";
 interface PageNameType {
     pageName: string;
   }
-
+ 
 export default function Header({pageName}: PageNameType) {
     const [isMenu, setIsMenu] = useState(false);
     const SiteMapOpen = () =>   {
