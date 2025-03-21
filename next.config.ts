@@ -3,9 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: false,
-
+  output: 'export',
   images: {
-    domains: ["cloudflare-ipfs.com", "https://fastly.picsum.photos", "https://loremflickr.com", "https://picsum.photos"], // 허용할 도메인 목록을 지정
     remotePatterns: [
       {
         protocol: "https",
