@@ -11,7 +11,7 @@ interface IFormProps {
   funnel: string | undefined;
 }
 
-export default function inquiry() {
+export default function Inquiry() {
   const [form, setForm] = useState<IFormProps>({
     userName: "",
     phoneNumber: "",
