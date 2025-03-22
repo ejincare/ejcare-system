@@ -9,7 +9,7 @@ import { ReactLenis } from 'lenis/react'
 import IconBoxWrap from "@/components/IconBoxWrap";
 import Hline from "@/components/Hline";
 import ConPartner from "@/components/ConPartner";
-import MainVisualWrap from "@/components/MainVisualWrap";
+import MainVisualWrap from "@/components/MainVisualWrapCopy";
 
 
 const geistSans = Geist({
