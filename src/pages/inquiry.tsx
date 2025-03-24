@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import SubHeader from "@/components/SubHeader";
 import { useState } from "react";
 
 interface IFormProps {
@@ -35,12 +36,9 @@ export default function Inquiry() {
 
   return (
     <div>
-      <Header pageName={"company"} />
+      <Header pageName={"subMenu"} />
       <main className="max-w-screen-xl mx-auto grid justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] gap-10 md:gap-[90px]" >
-        <div className="flex flex-col items-center gap-[10px] mt-[100px]">
-          <p className="text-[#e68600] text-[17px] text-[#e68600] md:text-xl font-medium md:font-semibold leading-[120%]">Inquiry</p>
-          <h1 className="text-si-primary-text text-[28px] text-[#131f35] md:text-[46px] font-bold leading-[120%]">견적문의</h1>
-        </div>
+        <SubHeader title_kor={"견적문의"} title_eng={"Inquiry"}/>
 
         <div className="bg-white md:bg-[#f2f2f6] rounded-[10px] px-4 pt-6 pb-8 md:p-16 flex flex-col gap-2 md:gap-5 text-si-primary-text">
           <div className="flex flex-col gap-2">

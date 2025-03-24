@@ -45,10 +45,10 @@ export default function MainVisualWrap() {
             modules={[Autoplay,Pagination]}
             loop={true} // Enable infinite looping
             slidesPerView={1}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false
-            }}
+            //autoplay={{
+            //  delay: 2500,
+            //  disableOnInteraction: false
+            //}}
             className='filter shadow-lg !h-[70vh]'
         >
             <SwiperSlide key={0} className='swiper-slide-keyvisual'>
