@@ -5,7 +5,7 @@ import { Autoplay,Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SwiperContainer } from "swiper/element";
 //import SearchSystem from './SearchSystem';
 
@@ -24,12 +24,13 @@ export default function MainVisualWrap() {
     SwiperMain.use([Autoplay,Pagination]);
     const swiperRef = useRef<SwiperRef>(null);
 
-    const updateSwiper = debounce(() => {
-        if (swiperRef.current) {
-            // Swiper 인스턴스를 초기화
-            swiperRef.current.swiper.update();
-        }
-    }, 300);
+    const updateSwiper = useCallback(debounce(() => {
+            if (swiperRef.current) {
+                // Swiper 인스턴스를 초기화
+                swiperRef.current.swiper.update();
+            }
+        }, 300), []
+    );
     
     useEffect(() => {
         const resizeObserver = new ResizeObserver(updateSwiper);
@@ -38,7 +39,7 @@ export default function MainVisualWrap() {
         return () => {
             resizeObserver.disconnect(); // 컴포넌트 언마운트 시 관찰 중지
         };
-    }, []);
+    }, [updateSwiper]);
 
     const photos = [
         {
@@ -74,7 +75,7 @@ export default function MainVisualWrap() {
         >
             {photos.map(el => {
                 return (
-                    <SwiperSlide className='swiper-slide-keyvisual'>
+                    <SwiperSlide key={el.url} className='swiper-slide-keyvisual'>
                         <div className="relative w-full h-screen overflow-hidden">
                             <Image
                                 src={el.url}
