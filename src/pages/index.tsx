@@ -12,7 +12,7 @@ import ConPartner from "@/components/ConPartner";
 import MainVisualWrap from "@/components/MainVisualWrap";
 import Footer from "@/components/Footer";
 
-
+ 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
