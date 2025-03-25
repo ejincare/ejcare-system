@@ -102,16 +102,22 @@ body {
 }
 
 .swiper-slide img {
-  @apply w-full h-full object-cover max-h-96; /* max-h-96 is equivalent to max-height: 24rem (384px) */
+  @apply w-full h-full object-cover; /* max-h-96 is equivalent to max-height: 24rem (384px) */
 }
 
 @keyframes zoomIn {
 0% {
   transform: scale(1);
+  /* transform-origin: right; */
 }
 100% {
   transform: scale(1.1);
+  /* transform-origin: right; */
 }
+}
+
+.swiper-slide-active .animate-zoom {
+  animation: zoomIn 3s linear forwards ;
 }
 
 @-webkit-keyframes zoom-a {

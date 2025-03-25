@@ -1,21 +1,21 @@
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
-import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
+// import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
 
 export default function Company() {
 
-  const [ loading, error ] = useKakaoLoader({
-    appkey: "26a3f8f66b1c14caf56c2a567054ca48", // 발급 받은 APPKEY
-    // ...options // 추가 옵션
-  });
+  // const [ loading, error ] = useKakaoLoader({
+  //   appkey: "26a3f8f66b1c14caf56c2a567054ca48", // 발급 받은 APPKEY
+  //   // ...options // 추가 옵션
+  // });
 
-  if (loading) {
-    return <div>로딩 중...</div>; // 로딩 중 처리 로직
-  }
+  // if (loading) {
+  //   return <div>로딩 중...</div>; // 로딩 중 처리 로직
+  // }
 
-  if (error) {
-    return <div>지도 로드 중 오류가 발생했습니다.</div>; // 로드 실패 처리 로직
-  }
+  // if (error) {
+  //   return <div>지도 로드 중 오류가 발생했습니다.</div>; // 로드 실패 처리 로직
+  // }
 
   return (
     <div>
@@ -36,14 +36,14 @@ export default function Company() {
                   </p>
               </div>
           </div>
-          <Map
+          {/* <Map
             center={{ lat: 33.5563, lng: 126.79581 }}
             className="w-full h-[360px]"
           >
             <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
               <div style={{color:"#000"}}>(주)이진케어시스템</div>
             </MapMarker>
-          </Map>
+          </Map> */}
         </div>
         
       </main>
