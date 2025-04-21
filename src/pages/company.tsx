@@ -21,9 +21,8 @@ export default function Company() {
     <div>
       <Header pageName={"subMenu"}/>    
       <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px]">
-        <SubHeader title_kor={"회사소개"} title_eng={"company"}/>
+        <SubHeader title_kor={"오시는 길"} title_eng={"Contact us"}/>
         <div className="mt-[100px]">
-          <h2 className="block text-[#131f35] text-[46px] font-bold text-left mb-10">오시는 길</h2>
           <div className="flex justify-between mb-5 text-[16px] bold">
               <div className="flex">
                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">

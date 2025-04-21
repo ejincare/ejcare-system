@@ -53,7 +53,7 @@ export default function MainVisualWrap() {
         >
             <SwiperSlide key={0} className='swiper-slide-keyvisual'>
                 <div className="bg-cover type-a1 bg-no-repeat bg-center">                   
-                    <section className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4">
+                    <section className="max-w-screen-5xl mx-auto flex flex-col lg:flex-row gap-4">
                         <div className="flex-1 w-full lg:w-4/5">
                             <div className="textOverlay flex flex-col items-start justify-center absolute top-0 right-0 z-20 w-1/2 h-full pl-12 leading-[1.3]">
                                 <span className='sub_tit text-xl sm:text-2xl text-white'>{photos[0].stitle}</span>

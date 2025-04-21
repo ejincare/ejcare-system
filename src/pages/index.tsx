@@ -37,8 +37,6 @@ export default function Home() {
         <IconBoxWrap />
         <Hline />
         <ConPartner/>
-        <ContactUs />
-        <Email />
       </main>
       
       <Footer />
