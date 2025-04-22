@@ -11,6 +11,7 @@ import Hline from "@/components/Hline";
 import ConPartner from "@/components/ConPartner";
 import MainVisualWrap from "@/components/MainVisualWrap";
 import Footer from "@/components/Footer";
+import SearchSystem from "@/components/SearchSystem";
 
  
 const geistSans = Geist({
@@ -29,8 +30,10 @@ export default function Home() {
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
       <Header pageName={"main"}/>
-      <MainVisualWrap />      
-      <main className="box-border px-5 xl:px-0">
+      <MainVisualWrap />    
+       
+      <main className="box-border px-5 xl:px-0 relative">
+        <SearchSystem url={""} title={"이진케어시스템"} description={"조회서비스"} /> 
         <MainText />
         <PhotoCarousel />
         <Hline />
