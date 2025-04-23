@@ -33,7 +33,7 @@ export default function Home() {
       <MainVisualWrap />    
        
       <main className="box-border px-5 xl:px-0 relative">
-        <SearchSystem url={""} title={"이진케어시스템"} description={"조회서비스"} /> 
+        <SearchSystem url={""} title={""} description={""} />
         <MainText />
         <PhotoCarousel />
         <Hline />
