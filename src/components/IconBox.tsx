@@ -2,16 +2,16 @@ import Image from "next/image";
 
 
 interface IconBoxProps {
-    index: number;
+    key: number;
     iconPath: string;
     title: string;
     description: string;
 }
 
-export default function IconBox({index, iconPath, title, description}: IconBoxProps) {
+export default function IconBox({key, iconPath, title, description}: IconBoxProps) {
     return (
         <li className={`${
-            index%2 == 0 ? 'sm:translate-y-[-120px]' : 'translate-y-[0px]'
+            key%2 == 0 ? 'sm:translate-y-[-120px]' : 'translate-y-[0px]'
         }`}>         
             <Image src={iconPath} alt="icon" className="flex-none w-full" width={48} height={48} />
             <div className="text-[15px] sm:text-[19px] block leading-[1.3] mt-3">{title}</div>
