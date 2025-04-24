@@ -48,7 +48,7 @@ export default function MainVisualWrap() {
             //autoplay={{
             //  delay: 2500,
             //  disableOnInteraction: false
-            //}}
+            //}} 
             className='filter shadow-lg !h-[70vh]'
         >
             <SwiperSlide key={0} className='swiper-slide-keyvisual'>
