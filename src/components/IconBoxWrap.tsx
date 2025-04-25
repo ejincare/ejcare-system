@@ -53,7 +53,7 @@ export default function IconBoxWrap() {
             <div className="flex-1 flex flex-col gap-6">
                 <ul className="grid grid-cols-2 gap-x-[40px] gap-y-[30px] sm:gap-y-[220px] md:grid-cols-3 lg:grid-cols-4">
                     {iconBoxCon.map((iconBoxCon) => (
-                        <IconBox key={iconBoxCon.index} iconPath={iconBoxCon.iconPath} title={iconBoxCon.title} description={iconBoxCon.description} />
+                        <IconBox key={iconBoxCon.index} iconNum={iconBoxCon.index} iconPath={iconBoxCon.iconPath} title={iconBoxCon.title} description={iconBoxCon.description} />
                     ))}
                 </ul>
             </div>
