@@ -1,21 +1,21 @@
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
-// import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
+import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
 
 export default function Company() {
 
-  // const [ loading, error ] = useKakaoLoader({
-  //   appkey: "26a3f8f66b1c14caf56c2a567054ca48", // 발급 받은 APPKEY
-  //   // ...options // 추가 옵션
-  // });
+  const [ loading, error ] = useKakaoLoader({
+    appkey: "26a3f8f66b1c14caf56c2a567054ca48", // 발급 받은 APPKEY
+    // ...options // 추가 옵션
+  });
 
-  // if (loading) {
-  //   return <div>로딩 중...</div>; // 로딩 중 처리 로직
-  // }
+  if (loading) {
+    return <div>로딩 중...</div>; // 로딩 중 처리 로직
+  }
 
-  // if (error) {
-  //   return <div>지도 로드 중 오류가 발생했습니다.</div>; // 로드 실패 처리 로직
-  // }
+  if (error) {
+    return <div>지도 로드 중 오류가 발생했습니다.</div>; // 로드 실패 처리 로직
+  }
 
   return (
     <div>
@@ -30,19 +30,19 @@ export default function Company() {
                       </path>
                   </svg>
                   <p className="text-[#131f35] text-left ml-5">
-                      인천광역시 연수구 하모니로 177번길 49 <br className="f_over"/>
-                      형지글로벌 패션복합센터 업무동 10층
+                      서울특별시 영등포구 선유로130 206-1호 <br className="f_over"/>
+                      ㈜이진케어시스템
                   </p>
               </div>
           </div>
-          {/* <Map
-            center={{ lat: 33.5563, lng: 126.79581 }}
+          <Map
+            center={{ lat: 37.525874, lng: 126.891278 }}
             className="w-full h-[360px]"
           >
-            <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
+            <MapMarker position={{ lat: 37.525874, lng: 126.891278 }}>
               <div style={{color:"#000"}}>(주)이진케어시스템</div>
             </MapMarker>
-          </Map> */}
+          </Map>
         </div>
         
       </main>
