@@ -72,16 +72,21 @@ export default function PhotoCarousel() {
   //     alt: "passiblestation",
   //   }
   // ]
+  interface PortfolioImage {
+    altText: string;
+    filePath: string;
+    fileSize: number;
+  }
+  interface portfolioImageNode {
+    node: PortfolioImage;
+  }
   interface Portfolio {
     id: string;
     title: string;
-    portfolioImage: {
-      "sourceUrl": string,
-      "mediaItemUrl": string,
-      "filePath": string,
-      "fileSize": number,
-      "altText": string
-    }
+    portfolioArea: string;
+    portfolioCon: string;
+    portfolioFloor: string;
+    portfolioImage: portfolioImageNode
   }
   interface PortfolioNode {
     node: Portfolio;
@@ -163,18 +168,18 @@ export default function PhotoCarousel() {
                     <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
                       <h4 className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0 text-[#e68600]">{portfolio.title}</h4>
                       <div className="items-center justify-between lg:mt-10 lg:p-0 sm:pt-5">
-                        <div className="text-base text-[#d1d1d6]"></div>
-                        <div className="text-xs text-gray-400"></div>
+                        <div className="text-base text-[#d1d1d6]">{portfolio.portfolioArea}</div>
+                        <div className="text-xs text-gray-400">{portfolio.portfolioFloor}</div>
                       </div>
-                      <div className="grid grid-cols-2 lg:grid-cols-1 mt-5 text-[#d1d1d6] text-base"></div>
+                      <div className="grid grid-cols-2 lg:grid-cols-1 mt-5 text-[#d1d1d6] text-base">{portfolio.portfolioCon}</div>
                     </div>
                     <div>
                       <Image
                         width={512}
                         height={512}
-                        src={portfolio.portfolioImage.sourceUrl}
+                        src={portfolio.portfolioImage.node.filePath}
                         className="flex-none w-full sm:w-20 w-12 h-12 sm:h-50"
-                        alt={portfolio.portfolioImage.altText}
+                        alt={portfolio.portfolioImage.node.altText}
                       />
                     </div>
                   </div>
