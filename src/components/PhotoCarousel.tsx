@@ -133,6 +133,14 @@ export default function PhotoCarousel() {
   // edges 배열을 꺼내고, node를 매핑해서 실제 portfolio 리스트를 만든다
   const portfolios = data?.portfolios.edges.map((edge) => edge.node).slice(0, 4);
 
+  const portfolioImageUrl = (src: string) => {
+    const wordpressDomain = "https://admin.ejincare.com"; // 실제 WordPress 사이트 도메인
+    const imageUrl = src.startsWith('http')
+    ? src
+    : `${wordpressDomain}${src}`;
+    return imageUrl;
+  }
+
     return (
         <section className="max-w-screen-xl mx-auto justify-center w-full text-center">
 
@@ -174,13 +182,20 @@ export default function PhotoCarousel() {
                       <div className="grid grid-cols-2 lg:grid-cols-1 mt-5 text-[#d1d1d6] text-base">{portfolio.portfolioCon}</div>
                     </div>
                     <div>
-                      <Image
-                        width={512}
-                        height={512}
-                        src={portfolio.portfolioImage.node.filePath}
-                        className="flex-none w-full sm:w-20 w-12 h-12 sm:h-50"
-                        alt={portfolio.portfolioImage.node.altText}
-                      />
+                      {
+                        portfolio?.portfolioImage?.node?.filePath ? (
+                          <Image
+                            width={512}
+                            height={512}
+                            src={portfolioImageUrl(portfolio.portfolioImage.node.filePath)}
+                            className="flex-none w-full sm:w-20 w-12 h-12 sm:h-50"
+                            alt={portfolio.portfolioImage.node.altText}
+                            unoptimized
+                          />
+                        ) : (
+                          <></>
+                        )
+                      }
                     </div>
                   </div>
                 </SwiperSlide>
