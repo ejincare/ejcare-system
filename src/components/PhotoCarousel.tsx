@@ -3,20 +3,6 @@ import SwiperCore from "swiper";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useQuery, gql } from "@apollo/client";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-
-
-// const client = new ApolloClient({
-//     uri: "https://admin.ejincare.com/",
-//     cache: new InMemoryCache(),
-// });
-import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
-
-if (1) {
-  // Adds messages only in a dev environment
-  loadDevMessages();
-  loadErrorMessages();
-}
 
 export default function PhotoCarousel() {
   SwiperCore.use([Autoplay,Pagination]);
@@ -97,9 +83,14 @@ export default function PhotoCarousel() {
       "altText": string
     }
   }
+  interface PortfolioNode {
+    node: Portfolio;
+  }
   
   interface PortfoliosData {
-    portfolios: Portfolio[];
+    portfolios: {
+      edges: PortfolioNode[]
+    }
   }
   
   const GET_PORTFOLIOS = gql`
@@ -134,17 +125,8 @@ export default function PhotoCarousel() {
   if (error) {
     return <h1>에러 발생</h1>;
   }
-
-  const portfolios = data?.portfolios.slice(0, 4);
-
-  if (!portfolios) {
-    return <h1>포트폴리오가 없습니다.</h1>;
-  }
-
-  if (portfolios) {
-    return <h1>포트폴리오가 있습니다.</h1>;
-    
-  }
+  // edges 배열을 꺼내고, node를 매핑해서 실제 portfolio 리스트를 만든다
+  const portfolios = data?.portfolios.edges.map((edge) => edge.node).slice(0, 4);
 
     return (
         <section className="max-w-screen-xl mx-auto justify-center w-full text-center">
@@ -175,7 +157,7 @@ export default function PhotoCarousel() {
                 }}
                 
             >
-              {data?.portfolios?.map((portfolio: Portfolio, idx: number) => (
+              {portfolios?.map((portfolio: Portfolio, idx: number) => (
                 <SwiperSlide key={`country-${idx}`} className="!h-[350px] sm:!h-[300px]">
                   <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[350px] sm:!h-[300px] bg-[#282828]">
                     <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
