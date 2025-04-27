@@ -6,6 +6,7 @@ on:
 jobs:
   restart:
     runs-on: ubuntu-latest
+    environment: nextjs-cafe24
 
     steps:
       - name: Restart Server Services via SSH
