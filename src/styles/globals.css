@@ -249,8 +249,9 @@ body {
 #header nav .depth1 {display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; height: 100%; }
 #header nav .depth1 li { position: relative; }
 #header nav .depth1 > li{height: 100%;}
+/*
 #header nav .depth1 > li > a { display: flex; align-items: center; justify-content: center; position: relative; height: 100%; padding: 0 2.5em; color: #fff; font-size: 18px; transition: padding 0.5s, color 0.25s; }
-#header nav .depth1 > li > a.on{color: var(--org);}
+#header nav .depth1 > li > a.on{color: var(--org);}*/
 #header nav .depth1 > li.active > a { color: var(--org); font-weight: 600; }
 
 #header.subMenu nav .depth1 > li > a {color: #131f35;}

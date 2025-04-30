@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+// interface menuOpenYnType {
+//   menuOpenYn: boolean;
+// }
+
 export default function Navigator() {
 
     const menuList = [
@@ -29,7 +33,7 @@ export default function Navigator() {
         href: './company'
       },            
     ]
-
+// console.log(menuOpenYn);
     return (
       <ul className="depth1">
         {menuList.map((menu) => (

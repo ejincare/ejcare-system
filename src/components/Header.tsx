@@ -7,9 +7,11 @@ import { useState } from "react";
 
 interface PageNameType {
     pageName: string;
-  }
+}
  
 export default function Header({pageName}: PageNameType) {
+    // const [isMenu400, setIsMenu400] = useState(false);
+
     const [isMenu, setIsMenu] = useState(false);
     const SiteMapOpen = () =>   {
         console.log("^^^^^^^^^^^^^"+isMenu);
@@ -18,9 +20,11 @@ export default function Header({pageName}: PageNameType) {
 
     const pathNameYn = pageName == "subMenu" ? true : false;
 
+    // console.log(isMenu400)
     return (        
         <div className="max-w-screen-xl mx-auto justify-center w-full text-center">
-            <div className="absolute w-full z-[2] right-0 left-0">
+            <div id="headerWrap" className="absolute w-full z-[2] right-0 left-0 transition-all sm:hover:bg-[#fff] sm:hover:h-[400px]"
+            >
                 <div id="header" className={`py-3 px-5 my-0 box-border ${pathNameYn ? "subMenu" : ""}`}>
                     <div className="h_in max-w-screen-xl mx-auto">
                         <h1 className="flex logo max-w-[125px] sm:max-w-48 ">
@@ -29,7 +33,7 @@ export default function Header({pageName}: PageNameType) {
                             </Link>
                         </h1>
                         <nav>
-                            <Navigator />
+                            <Navigator/>
                         </nav>
                         <div className={`right_btn justify-end ${isMenu ? 'on': ''}`} onClick={SiteMapOpen}>
                             <HamburgerBtn />

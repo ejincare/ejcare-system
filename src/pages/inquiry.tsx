@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import { useState } from "react";
 import axios from 'axios';
+import Swal from "sweetalert2";
 
 interface IFormProps {
   userName: string | undefined;
@@ -49,7 +50,13 @@ export default function Inquiry() {
           user_ref: form.funnel
       });
       
-      console.log(response);
+      if(response){
+        Swal.fire({
+          icon: "success",
+          title: "접수 완료",
+          text: "정상적으로 접수 완료되었습니다.",
+        });
+      }
     } catch (error) {
       //응답 실패
       console.error(error);
