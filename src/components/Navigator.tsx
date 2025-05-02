@@ -5,15 +5,15 @@ interface menuOpenYnType {
   menuOpenYn: boolean;
 }
 interface submenuType{
-  id: boolean;
-  title:String;
-  href:String;
+  id: string;
+  title: string;
+  href: string;
 }
 interface MenuList {
-  id: boolean;
-  title:String;
-  href:String;
-  submenu:[submenuType];
+  id: string;
+  title: string;
+  href: string;
+  submenu?: submenuType[];
 }
 
 export default function Navigator({menuOpenYn}: menuOpenYnType) {
@@ -28,7 +28,7 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
     }
   }, [menuOpenYn]);
 
-  const menuList: MenuList = [
+  const menuList: MenuList[] = [
     {
       id: '1',
       title: '회사소개',
@@ -75,8 +75,7 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
           </li>
         </ul>
         <ul>
-          {menu.submenu.map(subMenu => (
-             
+          {menu.submenu && menu.submenu.map(subMenu => (
              <li className="" key={menu.id}>
              <Link href={subMenu.href} className="text-black">
                {subMenu.title}
