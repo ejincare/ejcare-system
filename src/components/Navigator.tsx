@@ -1,10 +1,21 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-// interface menuOpenYnType {
-//   menuOpenYn: boolean;
-// }
+interface menuOpenYnType {
+  menuOpenYn: boolean;
+}
 
-export default function Navigator() {
+export default function Navigator({menuOpenYn}: menuOpenYnType) {
+  const [fontColor, setFontColor] = useState("text-white");
+  useEffect(() => {
+    console.log("menuOpenYn", menuOpenYn);
+    
+    if (menuOpenYn) {
+      setFontColor("text-black");
+    } else {
+      setFontColor("text-white");
+    }
+  }, [menuOpenYn]);
 
     const menuList = [
       {
@@ -38,7 +49,7 @@ export default function Navigator() {
       <ul className="depth1">
         {menuList.map((menu) => (
           <li className="" key={menu.id}>
-            <Link href={menu.href} className="text-white">
+            <Link href={menu.href} className={fontColor}>
               {menu.title}
             </Link>
           </li>
