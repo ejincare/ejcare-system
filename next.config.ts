@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'fonts.gstatic.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'admin.ejincare.com',
       }
     ]
   },
