@@ -74,8 +74,8 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
             <ul className="depth1 flex flex-col">
               {/* 서브메뉴가 있을 경우에만 서브메뉴를 렌더링 */}
               {menu.submenu && menu.submenu.map(subMenu => (
-                <li key={menu.id}>
-                <Link href={subMenu.href} className="text-[#333]">
+                <li key={menu.id + subMenu.id} className="text-sm">
+                <Link href={subMenu.href} className="inline-block text-[#333] py-2">
                   {subMenu.title}
                 </Link>
                 </li>
