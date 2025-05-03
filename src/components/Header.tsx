@@ -15,7 +15,7 @@ export default function Header({pageName}: PageNameType) {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
     const SiteMapOpen = () =>   {
-        console.log("^^^^^^^^^^^^^"+isMenu);
+        // console.log("^^^^^^^^^^^^^"+isMenu);
         setIsMenu((isMenu) => !isMenu);
     };
     const ToggleOpenMenu = (isEnter: boolean | ((prevState: boolean) => boolean)) => {
@@ -38,7 +38,7 @@ export default function Header({pageName}: PageNameType) {
                                 <Image src={"/img/logo2.png"} width={512} height={168} alt="" />
                             </Link>
                         </h1>
-                        <nav>
+                        <nav className="my-0 mx-auto flex items-center justify-center gap-5">
                             <Navigator menuOpenYn={isOpenMenu} />
                         </nav>
                         <div className={`right_btn justify-end ${isMenu ? 'on': ''}`} onClick={SiteMapOpen}>

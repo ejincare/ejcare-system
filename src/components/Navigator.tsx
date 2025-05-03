@@ -19,7 +19,7 @@ interface MenuList {
 export default function Navigator({menuOpenYn}: menuOpenYnType) {
   const [fontColor, setFontColor] = useState("text-white");
   useEffect(() => {
-    console.log("menuOpenYn", menuOpenYn);
+    // console.log("menuOpenYn", menuOpenYn);
     
     if (menuOpenYn) {
       setFontColor("text-black");
@@ -64,31 +64,26 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
   ]
 
     return (
-     <>
-      {menuList.map((menu) => (
-      <>
-        <ul className="depth1">
+      <ul className="flex gap-20">
+        {menuList.map((menu) => (
           <li className="" key={menu.id}>
             <Link href={menu.href} className={fontColor}>
               {menu.title}
             </Link>
+            {menuOpenYn && (
+            <ul className="depth1 flex flex-col">
+              {/* 서브메뉴가 있을 경우에만 서브메뉴를 렌더링 */}
+              {menu.submenu && menu.submenu.map(subMenu => (
+                <li key={menu.id}>
+                <Link href={subMenu.href} className="text-[#333]">
+                  {subMenu.title}
+                </Link>
+                </li>
+              ))}
+            </ul>
+            )}
           </li>
-        </ul>
-        <ul>
-          {menu.submenu && menu.submenu.map(subMenu => (
-             <li className="" key={menu.id}>
-             <Link href={subMenu.href} className="text-black">
-               {subMenu.title}
-             </Link>
-           </li>
-
-          ))}
-
-            <li></li>
-            <li></li>
-          </ul>
-          </>
         ))}
-    </>
+      </ul>   
     )
 }

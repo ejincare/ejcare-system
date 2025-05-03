@@ -248,8 +248,9 @@ body {
     #header nav{height: 100%;}
 #header nav .depth1 {display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; height: 100%; }
 #header nav .depth1 li { position: relative; }
-#header nav .depth1 > li{height: 100%;}
 /*
+#header nav .depth1 > li{height: 100%;}
+
 #header nav .depth1 > li > a { display: flex; align-items: center; justify-content: center; position: relative; height: 100%; padding: 0 2.5em; color: #fff; font-size: 18px; transition: padding 0.5s, color 0.25s; }
 #header nav .depth1 > li > a.on{color: var(--org);}*/
 #header nav .depth1 > li.active > a { color: var(--org); font-weight: 600; }
@@ -344,20 +345,6 @@ body {
     .sitemap .cont .top .close_btn:hover svg{transform: rotate(270deg); transition: transform 0.5s;}*/
   }
 
-  @media screen and (max-width: 1921px){
-      #header .right_btn .ham_btn {
-        /* width: 34px;
-        height: 34px; */
-      }
-      #header .right_btn .ham_btn svg {
-          /* font-size: 24px; */
-      }
-      /* #header .h_in{padding: 0 48px;} */
-      #header nav .depth1 > li > a {
-        padding: 0 2em;
-        font-size: 16px;
-      }
-  }
 
   @media screen and (max-width: 1441px) {
     /* .textOverlay .sub_tit {
