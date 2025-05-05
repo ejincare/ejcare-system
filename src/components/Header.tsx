@@ -26,8 +26,8 @@ export default function Header({pageName}: PageNameType) {
 
     // console.log(isMenu400)
     return (        
-        <div className="max-w-screen-xl mx-auto justify-center w-full text-center">
-            <div id="headerWrap" className="absolute w-full z-[2] right-0 left-0 transition-all sm:hover:bg-[#fff] sm:hover:h-[400px]"
+        <div className="max-w-screen-xl mx-auto justify-center items-start w-full text-center">
+            <div id="headerWrap" className="absolute w-full z-[2] right-0 left-0 transition-all sm:hover:bg-[#fff] sm:hover:h-[180px]"
                 onMouseEnter={() => ToggleOpenMenu(true)}
                 onMouseLeave={() => ToggleOpenMenu(false)}
             >
@@ -38,7 +38,7 @@ export default function Header({pageName}: PageNameType) {
                                 <Image src={"/img/logo2.png"} width={512} height={168} alt="" />
                             </Link>
                         </h1>
-                        <nav className="my-0 mx-auto flex items-center justify-center gap-5">
+                        <nav className="my-0 mx-auto flex items-start justify-center gap-5 mt-3">
                             <Navigator menuOpenYn={isOpenMenu} />
                         </nav>
                         <div className={`right_btn justify-end ${isMenu ? 'on': ''}`} onClick={SiteMapOpen}>
