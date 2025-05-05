@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation'
 
 interface menuOpenYnType {
   menuOpenYn: boolean;
@@ -17,14 +18,16 @@ interface MenuList {
 }
 
 export default function Navigator({menuOpenYn}: menuOpenYnType) {
-  const [fontColor, setFontColor] = useState("text-white");
+  const [fontColor, setFontColor] = useState("");
+  const pathname = usePathname()
   useEffect(() => {
     // console.log("menuOpenYn", menuOpenYn);
+    const defaultFontColor = pathname === '/' ? "text-white" : "text-gray-800";
     
     if (menuOpenYn) {
       setFontColor("text-black");
     } else {
-      setFontColor("text-white");
+      setFontColor(defaultFontColor);
     }
   }, [menuOpenYn]);
 
