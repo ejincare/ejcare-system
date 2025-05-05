@@ -71,7 +71,7 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
               {menu.title}
             </Link>
             {menuOpenYn && (
-            <ul className="depth1 flex flex-col">
+            <ul className="depth1 flex flex-col items-start mt-4">
               {/* 서브메뉴가 있을 경우에만 서브메뉴를 렌더링 */}
               {menu.submenu && menu.submenu.map(subMenu => (
                 <li key={menu.id + subMenu.id} className="text-sm">

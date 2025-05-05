@@ -79,16 +79,21 @@ export default function IconBoxWrap() {
 
                         {
                           iconboxwrap?.iconboxImage?.node?.filePath ? (
-                            <Image
-                              width={290}
-                              height={387}
-                              className="flex-none w-full"
-                              src={iconBoxConImageUrl(iconboxwrap.iconboxImage.node.filePath)}
-                              unoptimized alt={""}                            />
+                            <div className="overflow-hidden">
+                              <Image
+                                width={290}
+                                height={387}
+                                className="flex-none w-full hover:scale-105 transition-transform duration-300 ease-in-out"
+                                src={iconBoxConImageUrl(iconboxwrap.iconboxImage.node.filePath)}
+                                unoptimized alt={""} 
+                                />
+                            </div>   
                           ) : (
                             <></>
                           )
+                          
                         }
+                        
                           <div className="text-[15px] sm:text-[19px] block leading-[1.3] mt-3">{iconboxwrap.title}</div>
                           <div className="text-[13px] font-light leading-[1.6667em] mt-3">{iconboxwrap.iconboxTxt}</div>
                       </li>
