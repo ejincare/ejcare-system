@@ -19,7 +19,7 @@ export default function Footer() {
                 </section>
                 </div>
                 <div className="flex lg:flex-row flex-col gap-4 mt-4 lg:mt-6 text-[0.875rem] leading-[0.875rem] ">
-                <span>㈜이진케어시스템</span><span>대표이사 : 조원규</span><span>사업자등록번호 : 707-86-02404</span><span>주소 : 서울시 강서구 마곡중앙로 105-7 K스퀘어마곡 타워1 11,12층</span><a href="tel:1661-1119">고객센터 : 1661-1119</a>
+                <span>㈜이진케어시스템</span><span>대표이사 : 조원규</span><span>사업자등록번호 : </span><span>주소 : 서울특별시 영등포구 선유로130 206-1호</span><a href="tel:1661-1119">고객센터 : 1661-1119</a>
                 </div>
                 <div className="flex gap-2 mt-8 text-si-gray-6 text-[0.875rem] leading-[0.875rem]"><span>Copyright</span><span>ⓒ</span><span>2024 S&amp;I Corp.</span><span>All Rights Reserved.</span></div>
                 <div className="flex flex-row items-center gap-2 mt-16 sm:gap-7">
