@@ -37,10 +37,10 @@ export default function Company() {
               </div>
           </div>
           <Map
-            center={{ lat: 37.525874, lng: 126.891278 }}
+            center={{ lat: 37.525374, lng: 126.891212 }}
             className="w-full h-[360px]"
           >
-            <MapMarker position={{ lat: 37.525874, lng: 126.891278 }}>
+            <MapMarker position={{ lat: 37.525374, lng: 126.891212 }}>
               <div style={{color:"#000"}}>(주)이진케어시스템</div>
             </MapMarker>
           </Map>
