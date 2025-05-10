@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
@@ -20,7 +21,7 @@ export default function Company() {
   return (
     <div>
       <Header pageName={"subMenu"}/>    
-      <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px]">
+      <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] mb-[100px]">
         <SubHeader title_kor={"오시는 길"} title_eng={"Contact us"}/>
         <div className="mt-[100px]">
           <div className="flex justify-between mb-5 text-[16px] bold">
@@ -47,11 +48,7 @@ export default function Company() {
         
       </main>
       
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        
-      </footer>
-      {/* <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=26a3f8f66b1c14caf56c2a567054ca48&libraries=services,clusterer&autoload=false"></script> */}
-
+      <Footer />
     </div>
   );
 }
