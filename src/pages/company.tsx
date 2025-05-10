@@ -1,7 +1,6 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
+import Layout from "@/components/Layout";
 
 export default function Company() {
 
@@ -19,8 +18,7 @@ export default function Company() {
   }
 
   return (
-    <div>
-      <Header pageName={"subMenu"}/>    
+    <Layout>
       <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] mb-[100px]">
         <SubHeader title_kor={"오시는 길"} title_eng={"Contact us"}/>
         <div className="mt-[100px]">
@@ -47,8 +45,6 @@ export default function Company() {
         </div>
         
       </main>
-      
-      <Footer />
-    </div>
+    </Layout>
   );
 }

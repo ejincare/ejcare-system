@@ -1,12 +1,10 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import SubHeader from "@/components/SubHeader";
 
 
 export default function customerService() {
   return (
-    <div>
-      <Header pageName={"subMenu"}/>    
+    <Layout>
       <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] pb-[100px]">
         <SubHeader title_kor={"공지사항"} title_eng={"Notice"}/>
 
@@ -59,7 +57,6 @@ export default function customerService() {
           </ul> */}
 
       </main>
-      <Footer />
-    </div>
+    </Layout>
   );
 }

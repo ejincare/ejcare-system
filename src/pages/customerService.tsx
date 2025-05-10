@@ -1,16 +1,13 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import SubHeader from "@/components/SubHeader";
 import Image from "next/image";
 
 
 export default function customerService() {
   return (
-    <div>
-      <Header pageName={"subMenu"}/>    
+    <Layout>
       <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] mb-[100px]">
         <SubHeader title_kor={"회사소개"} title_eng={"Company"}/>
-
         <div className="block sm:flex items-start justify-start text-[#000] pt-[100px]">
           <div className="static top-[100px] w-auto sm:w-[40%] sm:sticky">
             <p className="mb-[1em] text-[1rem] font-[700] text-left">2014년부터 현재까지</p>
@@ -140,7 +137,6 @@ export default function customerService() {
           </div>
         </div>
       </main>
-      <Footer/>
-    </div>
+    </Layout>
   );
 }
