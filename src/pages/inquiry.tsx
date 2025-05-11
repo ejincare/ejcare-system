@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import { useState } from "react";
 import axios from 'axios';
 import Swal from "sweetalert2";
+import Layout from "@/components/Layout";
 
 interface IFormProps {
   userName: string | undefined;
@@ -64,9 +64,8 @@ export default function Inquiry() {
   }
 
   return (
-    <div>
-      <Header pageName={"subMenu"} />
-      <main className="max-w-screen-xl mx-auto grid sm:justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] md:gap-[90px]" >
+    <Layout>
+      <main className="max-w-screen-xl mx-auto grid sm:justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] md:gap-[90px] pb-[100px]" >
         <SubHeader title_kor={"견적문의"} title_eng={"Inquiry"}/>
 
         <div className="md:w-[1000px] bg-white md:bg-[#f2f2f6] rounded-[10px] px-4 pt-6 pb-8 md:p-16 flex flex-col gap-2 md:gap-5 text-si-primary-text">
@@ -148,8 +147,6 @@ export default function Inquiry() {
           </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer>
-    </div>
+    </Layout>
   );
 }
