@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ReactLenis } from 'lenis/react'
+import { usePathname } from 'next/navigation'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
 
 
 interface LayoutProps {
@@ -21,11 +23,22 @@ const geistMono = Geist_Mono({
 });
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [pageName, setPageName] = useState('')
+  const pathname = usePathname();
+  useEffect(() => {
+    if ( pathname === '/' ) {
+      setPageName('main')
+    } else {
+      setPageName('subMenu')
+    }
+  }, [pathname])
+  
+
   return (
     <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
-      <Header pageName={"main"}/>
+      <Header pageName={pageName} />
       <div className="min-h-screen pb-5">
         {children}
       </div>
