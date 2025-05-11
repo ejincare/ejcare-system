@@ -15,7 +15,7 @@ export default function Notice() {
   const [contentID, setContentID] = useState<string|undefined>()
   const [offset, setOffset] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const size = 3;
+  const size = 10;
 
 
   interface Notice {
@@ -71,7 +71,7 @@ export default function Notice() {
       }
     }
   `;
-
+ 
   const GET_NOTICE = gql`
     query NoticeQuery($id: ID!) {
       notice(id: $id) {
@@ -154,7 +154,7 @@ export default function Notice() {
                     <div className="w-[50%] text-left">{date}</div>
                   </div>
                   <div className="text-[1rem] font-[400] text-[#1f2937] pt-[20px] min-h-[500px]">
-                    {noticeData.notice.content}
+                    {noticeData.notice.content && noticeData.notice.content.replace(/<[^>]+>/g, "")}
                   </div>
                 </div>
               </div>
