@@ -13,8 +13,8 @@ export default function Notice() {
   const [date, setDate] = useState<string|undefined>()
   const [viewCount, setViewCount] = useState<number|undefined>()
   const [contentID, setContentID] = useState<string|undefined>()
-  const [offset, setOffset] = useState<number>(1);
-  const [currentPage, setCurrentPage] = useState<number>(0);
+  const [offset, setOffset] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const size = 3;
 
 
@@ -90,6 +90,13 @@ export default function Notice() {
     variables: { id: contentID },
     skip: !contentID,
   });
+  
+
+  useEffect(() => {
+    console.log('current page', currentPage);
+    console.log((currentPage - 1) * size)
+    setOffset((currentPage - 1) * size)
+  }, [currentPage])
 
   const getNotice = (e: any, id: string) => {
     e.preventDefault();
@@ -126,9 +133,9 @@ export default function Notice() {
   console.log(pageCount);
 
   const handlePageChange = (selectedItem: { selected: number }) => {
-    setCurrentPage(selectedItem.selected);
-    setOffset((selectedItem.selected - 1) * size)
+    setCurrentPage(selectedItem.selected + 1);
   };
+  
 
   return (
     <Layout>
