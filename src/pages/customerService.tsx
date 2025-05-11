@@ -3,7 +3,7 @@ import SubHeader from "@/components/SubHeader";
 import Image from "next/image";
 
 
-export default function customerService() {
+export default function CustomerService() {
   return (
     <Layout>
       <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] mb-[100px]">

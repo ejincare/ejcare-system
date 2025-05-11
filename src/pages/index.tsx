@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <MainVisualWrap />
-      <main className="box-border px-5 xl:px-0 relative">
+      <main className="box-border px-5 xl:px-0 relative pb-[100px]">
         <SearchSystem url={""} title={"이진케어조회시스템"} description={"oo를 간편하게 조회할 수 있습니다."} />
         <MainText />
         <PhotoCarousel />

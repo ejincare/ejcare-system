@@ -65,7 +65,7 @@ export default function Inquiry() {
 
   return (
     <Layout>
-      <main className="max-w-screen-xl mx-auto grid sm:justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] md:gap-[90px]" >
+      <main className="max-w-screen-xl mx-auto grid sm:justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] md:gap-[90px] pb-[100px]" >
         <SubHeader title_kor={"견적문의"} title_eng={"Inquiry"}/>
 
         <div className="md:w-[1000px] bg-white md:bg-[#f2f2f6] rounded-[10px] px-4 pt-6 pb-8 md:p-16 flex flex-col gap-2 md:gap-5 text-si-primary-text">
