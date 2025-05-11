@@ -104,13 +104,13 @@ export default function Notice() {
     console.log("id", id);
   }
 
-  if (loading) {
-    return <h2>로딩중</h2>;
-  }
+  // if (loading) {
+  //   return <h2>로딩중</h2>;
+  // }
 
-  if (error) {
-    return <h1>에러 발생</h1>;
-  }
+  // if (error) {
+  //   return <h1>에러 발생</h1>;
+  // }
 
   // if (noticeLoading) {
   //   return <h2>로딩중</h2>;
