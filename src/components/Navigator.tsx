@@ -29,7 +29,7 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
     } else {
       setFontColor(defaultFontColor);
     }
-  }, [pathname]);
+  }, [pathname, menuOpenYn]);
 
   const menuList: MenuList[] = [
     {

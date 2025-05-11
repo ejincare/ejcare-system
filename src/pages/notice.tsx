@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import SubHeader from "@/components/SubHeader";
 import { useQuery, gql } from "@apollo/client";
 import { get } from "http";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Pagination from "@/components/Pagination";
@@ -13,7 +13,9 @@ export default function Notice() {
   const [date, setDate] = useState<string|undefined>()
   const [viewCount, setViewCount] = useState<number|undefined>()
   const [contentID, setContentID] = useState<string|undefined>()
-  const [currentPage, setCurrentPage] = useState<number>(0);
+  const [offset, setOffset] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const size = 10;
 
 
   interface Notice {
@@ -50,8 +52,8 @@ export default function Notice() {
   }
   
   const GET_NOTICES = gql`
-    query NoticesQuery {
-      notices(where: {offsetPagination: {size: 10, offset:0 }}) {
+    query NoticesQuery($size: Int!, $offset: Int!) {
+      notices(where: {offsetPagination: {size: $size, offset:$offset }}) {
         edges {
           node {
             id
@@ -69,7 +71,7 @@ export default function Notice() {
       }
     }
   `;
-
+ 
   const GET_NOTICE = gql`
     query NoticeQuery($id: ID!) {
       notice(id: $id) {
@@ -81,11 +83,20 @@ export default function Notice() {
     }
   `;
 
-  const { data, loading, error } = useQuery<NoticesData>(GET_NOTICES);
+  const { data, loading, error } = useQuery<NoticesData>(GET_NOTICES, {
+    variables: { size: size, offset: offset },
+  });
   const { data: noticeData, loading: noticeLoading, error: noticeError } = useQuery<NoticeData>(GET_NOTICE, {
     variables: { id: contentID },
     skip: !contentID,
   });
+  
+
+  useEffect(() => {
+    console.log('current page', currentPage);
+    console.log((currentPage - 1) * size)
+    setOffset((currentPage - 1) * size)
+  }, [currentPage])
 
   const getNotice = (e: any, id: string) => {
     e.preventDefault();
@@ -93,13 +104,13 @@ export default function Notice() {
     console.log("id", id);
   }
 
-  if (loading) {
-    return <h2>로딩중</h2>;
-  }
+  // if (loading) {
+  //   return <h2>로딩중</h2>;
+  // }
 
-  if (error) {
-    return <h1>에러 발생</h1>;
-  }
+  // if (error) {
+  //   return <h1>에러 발생</h1>;
+  // }
 
   // if (noticeLoading) {
   //   return <h2>로딩중</h2>;
@@ -117,12 +128,14 @@ export default function Notice() {
   }
   // edges 배열을 꺼내고, node를 매핑해서 실제 portfolio 리스트를 만든다
   const notices = data?.notices.edges.map((edge) => edge.node);
-  const pageCount = Math.ceil((data?.notices.pageInfo.offsetPagination?.total || 0) / 10);
-
+  
+  const pageCount = Math.ceil((data?.notices.pageInfo.offsetPagination?.total || 0) / size);
+  console.log(pageCount);
 
   const handlePageChange = (selectedItem: { selected: number }) => {
-    setCurrentPage(selectedItem.selected);
+    setCurrentPage(selectedItem.selected + 1);
   };
+  
 
   return (
     <Layout>
@@ -141,7 +154,7 @@ export default function Notice() {
                     <div className="w-[50%] text-left">{date}</div>
                   </div>
                   <div className="text-[1rem] font-[400] text-[#1f2937] pt-[20px] min-h-[500px]">
-                    {noticeData.notice.content}
+                    {noticeData.notice.content && noticeData.notice.content.replace(/<[^>]+>/g, "")}
                   </div>
                 </div>
               </div>
@@ -167,7 +180,7 @@ export default function Notice() {
         {/* 페이지네이션 */}
         {pageCount > 0 && (
           <Pagination
-            pageCount={Math.max(1, pageCount - 1)}
+            pageCount={Math.max(1, pageCount)}
             onPageChange={handlePageChange}
             currentPage={currentPage}
           />
