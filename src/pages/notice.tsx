@@ -3,7 +3,9 @@ import SubHeader from "@/components/SubHeader";
 import { useQuery, gql } from "@apollo/client";
 import { get } from "http";
 import { useState } from "react";
-
+import ReactPaginate from "react-paginate";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Pagination from "@/components/Pagination";
 
 export default function Notice() {
   const [content, setContent] = useState<string|undefined>()
@@ -11,6 +13,7 @@ export default function Notice() {
   const [date, setDate] = useState<string|undefined>()
   const [viewCount, setViewCount] = useState<number|undefined>()
   const [contentID, setContentID] = useState<string|undefined>()
+  const [currentPage, setCurrentPage] = useState<number>(0);
 
 
   interface Notice {
@@ -33,8 +36,8 @@ export default function Notice() {
   }
   interface NoticesData {
     notices: {
-      edges: NoticeNode[]
-      PageInfo: PageInfoNode[]
+      edges: NoticeNode[];
+      pageInfo: PageInfoNode;
     }
   }
   interface PageInfo {
@@ -113,8 +116,13 @@ export default function Notice() {
     // setViewCount(noticeData.notice.viewCount);
   }
   // edges 배열을 꺼내고, node를 매핑해서 실제 portfolio 리스트를 만든다
-  const notices = data?.notices.edges.map((edge) => edge.node).slice(0, 4);
+  const notices = data?.notices.edges.map((edge) => edge.node);
+  const pageCount = Math.ceil((data?.notices.pageInfo.offsetPagination?.total || 0) / 10);
 
+
+  const handlePageChange = (selectedItem: { selected: number }) => {
+    setCurrentPage(selectedItem.selected);
+  };
 
   return (
     <Layout>
@@ -150,42 +158,20 @@ export default function Notice() {
                   <div className="w-[6%] text-[#B3B3B3] font-[600] text-center">{idx+1}</div>
                   <div className="flex-1 font-[600] text-left">{notice.title}</div>
                   <div className="w-[13%] shrink-0">관리자</div>
-                  <div className="w-[13%] text-[#B3B3B3] shrink-0">{notice.date}</div>
+                  <div className="w-[13%] text-[#B3B3B3] shrink-0">{notice.date.split("T")[0]}</div>
               </a>        
             </div>
             ))}
         </div> 
 
-        {/* <ul class="pagination">
-          <a href="?p=319&amp;page=1&amp;page=1" class="first">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                <path d="M52.7 244.7c-6.2 6.2-6.2 16.4 0 22.6l192 192c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L86.6 256 267.3 75.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-192 192zm384-192l-192 192c-6.2 6.2-6.2 16.4 0 22.6l192 192c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L278.6 256 459.3 75.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0z"></path>
-            </svg>
-          </a>
-          <a href="#url" class="prev">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
-                  <path d="M20.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l192-192c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L54.6 256 235.3 436.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-192-192z"></path>
-              </svg>
-          </a>
-                
-            <ul class="num_list">
-              <li class="active"><a href="#url" class="first">1</a></li>
-              <li><a href=""></a></li>
-              <li><a href="?p=319&amp;page=1&amp;page=3">3</a></li>               
-            </ul>
-
-            <a href="?p=319&amp;page=1&amp;page=11" class="next">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
-                  <path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"></path>
-              </svg>
-            </a>
-            <a href="?p=319&amp;page=1&amp;page=13" class="last">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                  <path d="M75.3 459.3l192-192c6.2-6.2 6.2-16.4 0-22.6l-192-192c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L233.4 256 52.7 436.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0zm192 0l192-192c6.2-6.2 6.2-16.4 0-22.6l-192-192c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L425.4 256 244.7 436.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0z"></path>
-              </svg>
-            </a>
-                
-          </ul> */}
+        {/* 페이지네이션 */}
+        {pageCount > 0 && (
+          <Pagination
+            pageCount={Math.max(1, pageCount - 1)}
+            onPageChange={handlePageChange}
+            currentPage={currentPage}
+          />
+        )}
       </main>
     </Layout>
   );

@@ -21,15 +21,9 @@ export default function Footer() {
                 <div className="flex lg:flex-row flex-col gap-4 mt-4 lg:mt-6 text-[0.875rem] leading-[0.875rem] ">
                 <span>㈜이진케어시스템</span><span>대표이사 : 조원규</span><span>사업자등록번호 : </span><span>주소 : 서울특별시 영등포구 선유로130 206-1호</span><a href="tel:1661-1119">고객센터 : 1661-1119</a>
                 </div>
-                <div className="flex gap-2 mt-8 text-si-gray-6 text-[0.875rem] leading-[0.875rem]"><span>Copyright</span><span>ⓒ</span><span>2024 S&amp;I Corp.</span><span>All Rights Reserved.</span></div>
+                <div className="flex gap-2 mt-8 text-si-gray-6 text-[0.875rem] leading-[0.875rem]"><span>Copyright</span><span>ⓒ</span><span>2024</span><span>All Rights Reserved.</span></div>
                 <div className="flex flex-row items-center gap-2 mt-16 sm:gap-7">
-                <div className="flex items-center gap-2 sm:gap-6 max-sm:flex-wrap">
-                    <div className="flex flex-col gap-3 max-sm:order-1 max-sm:w-full max-sm:mb-6">
-                    <a className="text-si-gray-6 text-[12px] leading-[15.6px] font-normal" href="https://isms.kisa.or.kr/main/ispims/issue/?certificationMode=list&amp;crtfYear=&amp;pageFlag=ISMS-P&amp;searchCondition=2&amp;searchKeyword=%EC%97%90%EC%8A%A4%EC%95%A4%EC%95%84%EC%9D%B4%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98" target="_blank" rel="noopener noreferrer" />
-                    [인증범위] B2B/B2C 대외 운영 서비스 <br className="max-sm:hidden"/> (홈페이지, <br className="sm:hidden"/> atG, 통근버스, 샌디앱)
-                    </div>
-                    <p className="text-si-gray-6 text-[12px] leading-[12px] font-normal">[유효기간] 2024.07.17 ~ 2027.07.16</p>
-                </div>
+                
                 </div>
             </div>
         </footer>
