@@ -153,8 +153,9 @@ export default function Notice() {
                   <div className="flex items-center justify-between">
                     <div className="w-[50%] text-left">{date}</div>
                   </div>
-                  <div className="text-[1rem] font-[400] text-[#1f2937] pt-[20px] min-h-[500px]">
-                    {noticeData.notice.content && noticeData.notice.content.replace(/<[^>]+>/g, "")}
+                  <div className="text-[1rem] font-[400] text-[#1f2937] pt-[20px] min-h-[500px]"
+                  dangerouslySetInnerHTML={{__html: noticeData.notice.content}}
+                  >                    
                   </div>
                 </div>
               </div>

@@ -10,8 +10,8 @@ export default function ConPartner() {
             <div className="relative w-full mx-auto flex flex-col text-si-primary-text max-w-[1500px] w-full text-[#ffffff]">
               <h4 className="text-[28px] md:text-[56px] font-bold leading-[140%] mb-5 text-left ">반 발 앞서 준비하고, 먼저 고민합니다</h4>
               <p className="text-[16px] md:text-[21px] font-medium leading-[155%] mb-5 text-left">
-                SANDI 얼라이언스는 S&amp;I와 함께하는 Open Innovation 파트너 입니다.<br/>
-                더욱 강력한 시장 경쟁력을 확보하고 있습니다.
+                주식회사 이진케어시스템은 고객만족을 최고의 가치로<br/>
+                여기는 One-Stop 상담서비스를 운영하고 있습니다.
               </p>        
             </div>
           </div>
