@@ -52,11 +52,6 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
       href: './inquiry'
     },
     {
-      id: '4',
-      title: '사업실적',
-      href: './businessPerformance'
-    },
-    {
       id: '5',
       title: '고객센터',
       href: './notice',
