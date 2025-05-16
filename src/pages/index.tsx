@@ -12,7 +12,6 @@ import LayerPopup from "@/components/LayerPopup";
 export default function Home() {
   return (
     <Layout>
-
       <MainVisualWrap />
       <main className="box-border px-5 xl:px-0 relative pb-[100px]">
         <SearchSystem url={"https://kij0423.mycafe24.com/user2/index.php"} title={"이진케어조회시스템"} description={"맞춤 관리 서비스를 통해 관리비를 점검해보세요."} />
