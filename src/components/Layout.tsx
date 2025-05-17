@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import { Geist, Geist_Mono } from "next/font/google";
 import { ReactLenis } from 'lenis/react'
 import { usePathname } from 'next/navigation'
@@ -38,6 +39,31 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <ReactLenis root
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
+      <NextSeo
+        title="이진케어"
+        description="이진케어 홈페이지입니다."
+        canonical="https://ejincare.com/"
+        openGraph={{
+          url: 'https://ejincare.com/',
+          title: '이진케어',
+          description: '이진케어 홈페이지입니다.',
+          images: [
+            {
+              url: 'https://ejincare.com/img/ejincare-logo-1200.jpg',
+              width: 1200,
+              height: 630,
+              alt: '이진케어 시스템',
+              type: 'image/jpg',
+            },
+          ],
+          site_name: '이진케어',
+        }}
+        twitter={{
+          handle: '@handle',
+          site: '@site',
+          cardType: 'summary_large_image',
+        }}
+      />
       <Header pageName={pageName} />
       <div className="min-h-screen pb-5">
         {children}

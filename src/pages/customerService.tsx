@@ -11,7 +11,7 @@ export default function CustomerService() {
         <div className="block sm:flex items-start justify-start text-[#000] pt-[100px]">
           <div className="static top-[100px] w-auto sm:w-[40%] sm:sticky">
             <p className="mb-[1em] text-[1rem] font-[700] text-left">2014년부터 현재까지</p>
-            <p className="sm:text-[3rem] text-[1.4rem] font-[700] leading-[1.3] text-left">고객과 함께 해온 이진케어시스템 역사</p>
+            <p className="sm:text-[2.5rem] text-[1.4rem] font-[700] leading-[1.3] text-left">고객과 함께 해온<br/> 이진케어시스템 역사</p>
           </div>
           <div className="flex-1 min-w-[50%] text-left sm:ml-[6em] mt-[1rem] sm:mt-0">
             <div className="flex flex-start min-w-[2.75em] mr-[2em]" data-year="2020">
