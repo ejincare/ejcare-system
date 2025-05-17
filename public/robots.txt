@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /TalkFile_이진케어시스템%20지명원_현장수정.pdf.pdf
