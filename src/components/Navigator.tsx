@@ -65,7 +65,7 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
       <ul className="flex gap-20">
         {menuList.map((menu) => (
           <li className="" key={menu.id}>
-            <Link href={menu.href} className={fontColor}>
+            <Link href={menu.href} className={fontColor} title={menu.title}>
               {menu.title}
             </Link>
             {menuOpenYn && (
@@ -73,7 +73,7 @@ export default function Navigator({menuOpenYn}: menuOpenYnType) {
               {/* 서브메뉴가 있을 경우에만 서브메뉴를 렌더링 */}
               {menu.submenu && menu.submenu.map(subMenu => (
                 <li key={menu.id + subMenu.id} className="text-sm">
-                <Link href={subMenu.href} className="inline-block text-[#333] py-2">
+                <Link href={subMenu.href} className="inline-block text-[#333] py-2" title={subMenu.title}>
                   {subMenu.title}
                 </Link>
                 </li>

@@ -45,7 +45,7 @@ export default function Header({pageName}: PageNameType) {
                 <div id="header" className={`py-3 px-5 my-0 box-border ${pathNameYn ? "subMenu" : ""}`}>
                     <div className="h_in max-w-screen-xl mx-auto">
                         <h1 className="flex logo max-w-[125px] sm:max-w-48 ">
-                            <Link href={"/"} className="logo">
+                            <Link href={"/"} className="logo" title="홈으로 이동">
                                 <Image src={"/img/logo2.png"} width={512} height={168} alt="" />
                             </Link>
                         </h1>
