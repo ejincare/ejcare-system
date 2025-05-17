@@ -50,9 +50,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           images: [
             {
               url: 'https://ejincare.com/img/ejincare-logo-1200.jpg',
-              width: 800,
-              height: 600,
-              alt: '이진케어 시스템템',
+              width: 1200,
+              height: 630,
+              alt: '이진케어 시스템',
               type: 'image/jpg',
             },
           ],
