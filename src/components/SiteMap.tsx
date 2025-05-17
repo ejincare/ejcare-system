@@ -43,14 +43,14 @@ const SiteMap = () => {
         <ul className="list mt-3 flex flex-col text-left">
           {menuList.map((menu) => (
             <li className="depth1 px-4 py-3" key={menu.id}>
-              <Link href={menu.href} className="text-white block">
+              <Link href={menu.href} className="text-white block" title={menu.title}>
                 {menu.title}
               </Link>
               <ul className="depth1 flex flex-col items-start mt-2">
                 {/* 서브메뉴가 있을 경우에만 서브메뉴를 렌더링 */}
                 {menu.submenu && menu.submenu.map(subMenu => (
                   <li key={menu.id + subMenu.id} className="text-sm">
-                  <Link href={subMenu.href} className="inline-block text-[#90a5b9] py-1">
+                  <Link href={subMenu.href} className="inline-block text-[#90a5b9] py-1" title={subMenu.title}>
                     {subMenu.title}
                   </Link>
                   </li>

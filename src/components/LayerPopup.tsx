@@ -31,7 +31,7 @@ export default function LayerPopup({isPopupOpen}: LayerPopupProps) {
           shouldCloseOnEsc={true}
           onRequestClose={handleCloseModal}
       >
-        <Link href="https://kij0423.mycafe24.com/user2/search_addr.php" target="_blank">
+        <Link href="https://kij0423.mycafe24.com/user2/search_addr.php" target="_blank" title="관리비 견적내기 링크">
           <Image src="/layerPopup_img01.png" alt="Layer Popup" className="cursor-pointer" width={891} height={1260} />    
         </Link>
         <button onClick={handleCloseModal} style={{padding:'5px 10px',backgroundColor:'#3c3c3c'}}>Close</button>
