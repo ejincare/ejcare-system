@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 interface LayoutProps {
   children: React.ReactNode; // 여기에 페이지 내용이 들어옵니다.
@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </div>
       <Footer />
-
+      <GoogleAnalytics gaId="GTM-PVSPRVBH" />
     </ReactLenis>
   );
 }
