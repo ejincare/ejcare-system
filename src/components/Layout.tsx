@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </div>
       <Footer />
-      <GoogleTagManager gtmId="GTM-5K6Q8Z3"  />
+      <GoogleTagManager gtmId="GTM-PVSPRVBH"  />
       <GoogleAnalytics gaId="G-Q6NFQBFJG6"  />
     </ReactLenis>
   );
