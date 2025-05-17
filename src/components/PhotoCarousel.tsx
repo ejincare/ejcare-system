@@ -58,13 +58,13 @@ export default function PhotoCarousel() {
 
   const { data, loading, error } = useQuery<PortfoliosData>(GET_PORTFOLIOS);
 
-  if (loading) {
-    return <h2>로딩중</h2>;
-  }
+  // if (loading) {
+  //   return <h2>로딩중</h2>;
+  // }
 
-  if (error) {
-    return <h1>에러 발생</h1>;
-  }
+  // if (error) {
+  //   return <h1>에러 발생</h1>;
+  // }
   // edges 배열을 꺼내고, node를 매핑해서 실제 portfolio 리스트를 만든다
   const portfolios = data?.portfolios.edges.map((edge) => edge.node).slice(0, 4);
 
