@@ -144,7 +144,10 @@ export default function Notice() {
 
          <div className="pt-[100px]">
             {
-              noticeLoading && <div className="text-left min-h-[500px]"><h2 className="text-black">로딩중..</h2></div>
+              noticeLoading && 
+                <div className="text-left min-h-[500px]">
+                  <p className="text-black">로딩중..</p>
+                </div>
             }
             {
               noticeData && <div className="text-left">

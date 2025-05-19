@@ -58,13 +58,13 @@ export default function PhotoCarousel() {
 
   const { data, loading, error } = useQuery<PortfoliosData>(GET_PORTFOLIOS);
 
-  if (loading) {
-    return <h2>로딩중</h2>;
-  }
+  // if (loading) {
+  //   return <h2>로딩중</h2>;
+  // }
 
-  if (error) {
-    return <h1>에러 발생</h1>;
-  }
+  // if (error) {
+  //   return <h1>에러 발생</h1>;
+  // }
   // edges 배열을 꺼내고, node를 매핑해서 실제 portfolio 리스트를 만든다
   const portfolios = data?.portfolios.edges.map((edge) => edge.node).slice(0, 4);
 
@@ -109,7 +109,7 @@ export default function PhotoCarousel() {
                 <SwiperSlide key={`country-${idx}`} className="!h-[350px] sm:!h-[300px]">
                   <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[350px] sm:!h-[300px] bg-[#282828]">
                     <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
-                      <h4 className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0 text-[#e68600]">{portfolio.title}</h4>
+                      <div className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0 text-[#e68600]">{portfolio.title}</div>
                       <div className="items-center justify-between lg:mt-10 lg:p-0 sm:pt-5">
                         <div className="text-base text-[#d1d1d6]">{portfolio.portfolioArea}</div>
                         <div className="text-xs text-gray-400">{portfolio.portfolioFloor}</div>
