@@ -64,7 +64,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         }}
       />
       <Header pageName={pageName} />
-      <div className="min-h-screen pb-5">
+      <div className="sm:min-h-screen pb-5">
         {children}
       </div>
       <Footer />
