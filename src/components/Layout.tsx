@@ -39,7 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
       <Header pageName={pageName} />
-      <div className="min-h-screen pb-5">
+      <div className="sm:min-h-screen pb-5">
         {children}
       </div>
       <Footer />

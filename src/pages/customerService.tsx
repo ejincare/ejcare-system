@@ -7,13 +7,22 @@ export default function CustomerService() {
   return (
     <Layout>
       <main className="max-w-screen-xl mx-auto justify-center w-full text-center box-border px-5 xl:px-0 pt-[72px] mb-[100px]">
-        <SubHeader title_kor={"회사소개"} title_eng={"Company"}/>
-        <div className="block sm:flex items-start justify-start text-[#000] pt-[100px]">
-          <div className="static top-[100px] w-auto sm:w-[40%] sm:sticky">
-            <p className="mb-[1em] text-[1rem] font-[700] text-left">2014년부터 현재까지</p>
-            <p className="sm:text-[2.5rem] text-[1.4rem] font-[700] leading-[1.3] text-left">고객과 함께 해온<br/> 이진케어시스템 역사</p>
+        <SubHeader title_kor={"연혁"} title_eng={"History"}/>
+        <div className="block items-start justify-center text-[#000] pt-[100px]">
+          <div className="top-[100px]">
+            <p className="mb-[1em] text-[1rem] font-[700] text-center">2014년부터 현재까지</p>
+            <p className="sm:text-[2.5rem] text-[1.4rem] font-[700] leading-[1.3] text-center">고객과 함께 해온 이진케어시스템 역사</p>
           </div>
-          <div className="flex-1 min-w-[50%] text-left sm:ml-[6em] mt-[1rem] sm:mt-0">
+          <div className="sm:mt-[100px] mt-[50px]">
+          <Image
+            width={1280}
+            height={720}
+            src="/IMG_5062.png" 
+            alt=""
+            unoptimized
+            />
+          </div>
+          {/* <div className="flex-1 min-w-[50%] text-left sm:ml-[6em] mt-[1rem] sm:mt-0">
             <div className="flex flex-start min-w-[2.75em] mr-[2em]" data-year="2020">
               <p className="flex-1 max-w-[6rem] mr-[2em] sm:text-[2rem] text-[19px] font-[700] leading-[1.5]" >2020</p>
               <div className="text-[1rem] text-left">
@@ -134,7 +143,7 @@ export default function CustomerService() {
                 </div>
               </div>  
             </div>                                                          
-          </div>
+          </div> */}
         </div>
       </main>
     </Layout>
