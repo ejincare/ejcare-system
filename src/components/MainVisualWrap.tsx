@@ -19,7 +19,7 @@ export default function MainVisualWrap() {
             url: '/main_visual02.jpg',
             alt: '/main_visual02.jpg',
             className: 'pc',
-            stitle: '수준 높은 서서비스로',
+            stitle: '수준 높은 서비스로',
             ttitle: '자산가치를 높여 드립니다.',
         }    
     ]
