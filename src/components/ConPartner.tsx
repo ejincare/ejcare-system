@@ -15,7 +15,7 @@ export default function ConPartner() {
               </p>        
             </div>
           </div>
-          <Image className='w-full' src="/img/partner.png" alt="partner" width={1920} height={1080} />
+          <Image className='w-full' src="/img/partner.jpg" alt="partner" width={1920} height={1080} />
         </section>
       </div>
     )
