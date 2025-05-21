@@ -58,7 +58,7 @@ export default function IconBoxWrap() {
   //   return <h1>에러 발생</h1>;
   // }
     // edges 배열을 꺼내고, node를 매핑해서 실제 iconboxwraps 리스트를 만든다
-  const iconboxwraps = data?.iconboxwraps.edges.map((edge) => edge.node).slice(0, 4);
+  const iconboxwraps = data?.iconboxwraps.edges.map((edge) => edge.node);
 
   const iconBoxConImageUrl = (src: string) => {
     const wordpressDomain = "https://admin.ejincare.com"; // 실제 WordPress 사이트 도메인
