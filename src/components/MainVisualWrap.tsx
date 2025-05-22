@@ -19,7 +19,7 @@ export default function MainVisualWrap() {
             url: '/main_visual02.jpg',
             alt: '/main_visual02.jpg',
             className: 'pc',
-            stitle: '수준 높은 서서비스로',
+            stitle: '수준 높은 서비스로',
             ttitle: '자산가치를 높여 드립니다.',
         }    
     ]
@@ -42,7 +42,7 @@ export default function MainVisualWrap() {
                                 <span className='sub_tit text-xl sm:text-2xl text-white'>{photos[0].stitle}</span>
                                 <span className='tit text-2xl sm:text-4xl text-white mt-1'>{photos[0].ttitle}</span>
                                 <div className="more_btn">
-                                    <a href="#" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
+                                    <a href="https://kij0423.mycafe24.com/user2/search_addr.php" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
                                          조회시스템 바로 가기
                                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#ffffff"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
                                     </a>
@@ -65,7 +65,7 @@ export default function MainVisualWrap() {
                                 <span className='sub_tit text-xl sm:text-2xl text-white'>{photos[1].stitle}</span>
                                 <span className='tit text-2xl sm:text-4xl text-white mt-1'>{photos[1].ttitle}</span>
                                 <div className="more_btn">
-                                    <a href="#" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
+                                    <a href="https://kij0423.mycafe24.com/user2/search_addr.php" className="inline-flex items-center whitespace-nowrap translate-y-full py-4 px-6 bg-[#2d3e4e] text-white text-base font-medium rounded-full leading-none" target="_self">
                                         조회시스템 바로 가기
                                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#ffffff"><path d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg>
                                     </a>
