@@ -11,6 +11,9 @@ importers:
       '@apollo/client':
         specifier: ^3.13.8
         version: 3.13.8(@types/react@19.0.8)(graphql@16.11.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@google-recaptcha/react':
+        specifier: ^2.2.0
+        version: 2.2.0(@types/react@19.0.8)(react@19.0.0)
       '@next/third-parties':
         specifier: ^15.3.2
         version: 15.3.2(next@15.1.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -159,6 +162,18 @@ packages:
   '@faker-js/faker@9.4.0':
     resolution: {integrity: sha512-85+k0AxaZSTowL0gXp8zYWDIrWclTbRPg/pm/V0dSFZ6W6D4lhcG3uuZl4zLsEKfEvs69xDbLN2cHQudwp95JA==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0'}
+
+  '@google-recaptcha/core@1.1.0':
+    resolution: {integrity: sha512-9ENDs4gCdNUyuhGb3O6EBKmRUn8TVa1uigZcTW58VSjwzv+KHyO93ZC4O39y70oBTkm+1LJTbSHluUcVqDib1Q==}
+
+  '@google-recaptcha/react@2.2.0':
+    resolution: {integrity: sha512-xsD2GNTJUgWp6+bztAxtYik0wKkh/Ly08VwwmV70F6QhutJ3OfiCCJC9kxpUp+fAudTUi11WeaOBrcFGU8zjpQ==}
+    peerDependencies:
+      '@types/react': ^17 || ^18|| ^19
+      react: ^17 || ^18 || ^19
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
@@ -2025,6 +2040,15 @@ snapshots:
       levn: 0.4.1
 
   '@faker-js/faker@9.4.0': {}
+
+  '@google-recaptcha/core@1.1.0': {}
+
+  '@google-recaptcha/react@2.2.0(@types/react@19.0.8)(react@19.0.0)':
+    dependencies:
+      '@google-recaptcha/core': 1.1.0
+      react: 19.0.0
+    optionalDependencies:
+      '@types/react': 19.0.8
 
   '@graphql-typed-document-node/core@3.2.0(graphql@16.11.0)':
     dependencies:
