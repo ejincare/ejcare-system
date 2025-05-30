@@ -2,6 +2,7 @@ import SubHeader from "@/components/SubHeader";
 import { useState } from "react";
 import axios from 'axios';
 import Swal from "sweetalert2";
+import ReCaptchaProvider from "@/components/ReCaptchaProvider";
 import Layout from "@/components/Layout";
 
 interface IFormProps {
@@ -101,6 +102,7 @@ export default function Inquiry() {
             {errors.userName && <span className="text-red-500">{errors.userName}</span>}
           </div> */}
 
+          <ReCaptchaProvider>
           <div className="flex flex-col gap-2">
             <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center ">
               <label htmlFor="phoneNumber" className="font-medium leading-[120%] text-[17px] text-[#131f35] w-[120px] xl:w-[140px] py-[10px] mr-[10px] text-left">연락처<span className="text-[#e68600] ml-[6px]">*</span>
@@ -127,6 +129,7 @@ export default function Inquiry() {
             </div>
             <div className="flex justify-between w-full md:max-w-[580px] ml-auto"></div>
           </div>
+          </ReCaptchaProvider>
           
           {/* <div className="flex flex-col gap-2">
             <label htmlFor="email">이메일</label>
