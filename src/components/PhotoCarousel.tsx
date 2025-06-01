@@ -3,6 +3,7 @@ import SwiperCore from "swiper";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useQuery, gql } from "@apollo/client";
+import { motion } from "motion/react";
 
 export default function PhotoCarousel() {
   SwiperCore.use([Autoplay,Pagination]);
@@ -106,6 +107,12 @@ export default function PhotoCarousel() {
                 
             >
               {portfolios?.map((portfolio: Portfolio, idx: number) => (
+                
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 0 }}
+                  transition={{ type: "linear", stiffness: 100 }}
+                >
                 <SwiperSlide key={`country-${idx}`} className="!h-[350px] sm:!h-[300px]">
                   <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[350px] sm:!h-[300px] bg-[#282828]">
                     <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
@@ -134,6 +141,7 @@ export default function PhotoCarousel() {
                     </div>
                   </div>
                 </SwiperSlide>
+                </motion.div>
                ))}
           </Swiper>           
          

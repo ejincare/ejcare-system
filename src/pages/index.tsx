@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <Layout>
       <MainVisualWrap />
-      <main className="box-border px-5 xl:px-0 relative pb-[100px]">
+      <main className="box-border px-5 xl:px-0 relative pb-[100px] overflow-hidden">
         <SearchSystem url={"https://kij0423.mycafe24.com/user2/search_addr.php"} title={"이진케어조회시스템"} description={"맞춤 관리 서비스를 통해 관리비를 점검해보세요."} />
-        <MainText />
-        <PhotoCarousel />
+        <MainText />  
+          <PhotoCarousel />
         <Hline />
         <IconBoxWrap />
         <Hline />
