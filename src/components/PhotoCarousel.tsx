@@ -109,11 +109,12 @@ export default function PhotoCarousel() {
               {portfolios?.map((portfolio: Portfolio, idx: number) => (
                 
                 <motion.div
+                  key={portfolio.id}
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 0 }}
                   transition={{ type: "linear", stiffness: 100 }}
                 >
-                <SwiperSlide key={`country-${idx}`} className="!h-[350px] sm:!h-[300px]">
+                <SwiperSlide className="!h-[350px] sm:!h-[300px]">
                   <div className="lg:h-full rounded-[10px] overflow-hidden sm:flex sm:justify-between h-[350px] sm:!h-[300px] bg-[#282828]">
                     <div className="relative flex-none sm:flex sm:justify-start flex-col justify-between bg-gray-05 p-6 md:pr-[30px] sm:w-auto text-left">
                       <div className="text-xl md:text-xl font-semibold leading-[140%] lg:p-0 text-[#e68600]">{portfolio.title}</div>
