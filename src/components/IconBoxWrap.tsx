@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useQuery, gql } from "@apollo/client";
+import { motion } from "motion/react"
+import { useState } from "react";
 
 export default function IconBoxWrap() {
 
@@ -49,6 +51,7 @@ export default function IconBoxWrap() {
   `;
 
   const { data, loading, error } = useQuery<IconBoxWrapsData>(GET_ICONBOXCON);
+  const [inView, setInView] = useState(false)
 
   // if (loading) {
   //   return <h2>로딩중</h2>;
@@ -69,7 +72,14 @@ export default function IconBoxWrap() {
   }
 
     return (
-        <section className="max-w-screen-xl mx-auto min-h-48 text-gray-800 sm:mt-[200px] mt-[0px] text-2xl font-bold">
+        <motion.section className="max-w-screen-xl mx-auto min-h-48 text-gray-800 sm:mt-[200px] mt-[0px] text-2xl font-bold"
+        
+          // initial={{ x: 100, opacity: 0 }}
+          // whileInView={{ x: 0, opacity: 1 }}
+          onViewportEnter={() => setInView(true)}
+          onViewportLeave={() => setInView(false)}
+          transition={{ type: "spring", stiffness: 100 }}
+          >
             <div className="flex-1 flex flex-col gap-6">
                 <ul className="grid grid-cols-2 gap-x-[40px] gap-y-[30px] sm:gap-y-[220px] md:grid-cols-3 lg:grid-cols-4">
                     {iconboxwraps?.map((iconboxwrap: Iconboxwrap, idx: number) => (
@@ -79,7 +89,9 @@ export default function IconBoxWrap() {
 
                         {
                           iconboxwrap?.iconboxImage?.node?.filePath ? (
-                            <div className="overflow-hidden">
+                            <motion.div className="overflow-hidden"
+                                whileInView={{ y: 0, opacity: 1 }}
+                                initial={{ y: 100, opacity: 0 }}  >
                               <Image
                                 width={290}
                                 height={387}
@@ -87,7 +99,7 @@ export default function IconBoxWrap() {
                                 src={iconBoxConImageUrl(iconboxwrap.iconboxImage.node.filePath)}
                                 unoptimized alt={""} 
                                 />
-                            </div>   
+                            </motion.div>   
                           ) : (
                             <></>
                           )
@@ -100,6 +112,6 @@ export default function IconBoxWrap() {
                     ))}
                 </ul>
             </div>
-        </section>
+        </motion.section>
     )
 }
