@@ -14,7 +14,7 @@ export default function BusinessIconBoxWrap({iconPath, title, description}: Icon
               <Image src={iconPath} alt="icon" className="flex-none w-12 h-12" width={48} height={48} />
               <h4 className="flex-1 text-xl font-bold text-center" dangerouslySetInnerHTML={{ __html: title }}></h4>           
             </div>
-            <p className="text-base font-light text-center">{description}</p>
+            <p className="text-base font-light text-center"dangerouslySetInnerHTML={{__html: description}}></p>
         </div>
     )
 }
