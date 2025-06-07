@@ -78,7 +78,7 @@ export default function PhotoCarousel() {
   }
 
     return (
-        <section className="max-w-screen-xl mx-auto justify-center w-full text-center">
+        <section className="max-w-screen-xl mx-auto justify-center w-full text-center py-20 md:py-40">
 
         
           <Swiper
