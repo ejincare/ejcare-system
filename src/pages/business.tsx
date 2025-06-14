@@ -13,7 +13,7 @@ export default function business() {
         <p className="text-center text-[17px] md:text-[24px] font-medium leading-[155%]  mt-[20px] text-[#282828]">발생 가능한 문제를 미리 찾고, 새로운 해결 방식을 제안합니다</p>
         <BusinessIconBoxWrap/>
         <div className="flex flex-col items-center justify-center">
-          <Image src="/IMG_4636.png" alt="company" width={1000} height={1000} className="mx-auto mt-[100px]"/>
+          {/* <Image src="/IMG_4636.png" alt="company" width={1000} height={1000} className="mx-auto mt-[100px]"/> */}
           <Image src="/IMG_4637.png" alt="company" width={1000} height={1000} className="mx-auto mt-[100px]"/>
         </div>
       </main>
