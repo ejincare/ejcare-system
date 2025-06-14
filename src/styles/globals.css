@@ -288,6 +288,9 @@ body {
 .swiper-slide img.mobile {
   display: none;
 }
+.notice-detail div p {
+  margin: 1rem auto;
+}
 
 .textOverlay {
   /* display: flex;

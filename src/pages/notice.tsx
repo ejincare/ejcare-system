@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Pagination from "@/components/Pagination";
+import Link from "next/link";
 
 export default function Notice() {
   const [content, setContent] = useState<string|undefined>()
@@ -20,6 +21,7 @@ export default function Notice() {
 
   interface Notice {
     id: string;
+    databaseId: number;
     title: string;
     content: string;
     date: string;
@@ -29,12 +31,7 @@ export default function Notice() {
   }  
 
   interface NoticeData  {
-    notice: {
-      id: string;
-      title: string;
-      content: string;
-      date: string;
-    }
+    notice: Notice | null;
   }
   interface NoticesData {
     notices: {
@@ -57,6 +54,7 @@ export default function Notice() {
         edges {
           node {
             id
+            databaseId
             title
             date
           }
@@ -143,26 +141,6 @@ export default function Notice() {
         <SubHeader title_kor={"공지사항"} title_eng={"Notice"}/>
 
          <div className="pt-[100px]">
-            {
-              noticeLoading && 
-                <div className="text-left min-h-[500px]">
-                  <p className="text-black">로딩중..</p>
-                </div>
-            }
-            {
-              noticeData && <div className="text-left">
-                <h1 className="text-[2rem] font-[600] text-[#1f2937]">{title}</h1>
-                <div className="text-[1rem] font-[400] text-[#1f2937]">
-                  <div className="flex items-center justify-between">
-                    <div className="w-[50%] text-left">{date}</div>
-                  </div>
-                  <div className="text-[1rem] font-[400] text-[#1f2937] pt-[20px] min-h-[500px]"
-                  dangerouslySetInnerHTML={{__html: noticeData.notice.content}}
-                  >                    
-                  </div>
-                </div>
-              </div>
-            }
             <div className="flex items-center justify-start text-[1rem] font-[600] text-center border-t text-[#1f2937] border-black border-solid" >
                 <div className="w-[6%] py-[1.4rem] px-[0]">번호</div>
                 <div className="flex-1">제목</div>
@@ -171,12 +149,15 @@ export default function Notice() {
             </div>
             {notices?.map((notice: Notice, idx: number) => (
             <div key={`notice-${notice.id}`} className="w-full">
-              <a href="#" className="flex items-center justify-start py-[1.4rem] px-[0] border-t text-[#1f2937] border-[#e5e5e5] border-solid" onClick={(e: React.MouseEvent) => getNotice(e, notice.id)}>
-                  <div className="w-[6%] text-[#B3B3B3] font-[600] text-center">{idx+1}</div>
-                  <div className="flex-1 font-[600] text-left">{notice.title}</div>
-                  <div className="w-[13%] shrink-0">관리자</div>
-                  <div className="w-[13%] text-[#B3B3B3] shrink-0">{notice.date.split("T")[0]}</div>
-              </a>        
+              {/* <a href={`/notice/${notice.databaseId}`} className="flex items-center justify-start py-[1.4rem] px-[0] border-t text-[#1f2937] border-[#e5e5e5] border-solid" > */}
+              <Link href={{ pathname: '/notice/[id]', query: { id: notice.databaseId } }}
+              className="flex items-center justify-start py-[1.4rem] px-[0] border-t text-[#1f2937] border-[#e5e5e5] border-solid"
+              >
+                <div className="w-[6%] text-[#B3B3B3] font-[600] text-center">{idx+1}</div>
+                <div className="flex-1 font-[600] text-left">{notice.title}</div>
+                <div className="w-[13%] shrink-0">관리자</div>
+                <div className="w-[13%] text-[#B3B3B3] shrink-0">{notice.date.split("T")[0]}</div>
+              </Link>
             </div>
             ))}
         </div> 

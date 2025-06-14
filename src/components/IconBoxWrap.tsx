@@ -72,13 +72,13 @@ export default function IconBoxWrap() {
   }
 
     return (
-        <motion.section className="max-w-screen-xl mx-auto min-h-48 text-gray-800 sm:mt-[200px] mt-[0px] text-2xl font-bold"
+        <motion.section className="max-w-screen-xl mx-auto min-h-48 text-gray-800 sm:mt-[200px] mt-[0px] text-2xl font-bold py-20 md:py-40"
         
           // initial={{ x: 100, opacity: 0 }}
           // whileInView={{ x: 0, opacity: 1 }}
           onViewportEnter={() => setInView(true)}
           onViewportLeave={() => setInView(false)}
-          transition={{ type: "spring", stiffness: 100 }}
+          transition={{ type: "spring", stiffness: 1000 }}
           >
             <div className="flex-1 flex flex-col gap-6">
                 <ul className="grid grid-cols-2 gap-x-[40px] gap-y-[30px] sm:gap-y-[220px] md:grid-cols-3 lg:grid-cols-4">
@@ -90,7 +90,7 @@ export default function IconBoxWrap() {
                         {
                           iconboxwrap?.iconboxImage?.node?.filePath ? (
                             <motion.div className="overflow-hidden"
-                                whileInView={{ y: 0, opacity: 1 }}
+                                whileInView={{ y: 0, opacity: 1,transition: { duration: 0.3 } }}
                                 initial={{ y: 100, opacity: 0 }}  >
                               <Image
                                 width={290}
@@ -106,8 +106,8 @@ export default function IconBoxWrap() {
                           
                         }
                         
-                          <div className="text-[15px] sm:text-[19px] block leading-[1.3] mt-3">{iconboxwrap.title}</div>
-                          <div className="text-[13px] font-light leading-[1.6667em] mt-3">{iconboxwrap.iconboxTxt}</div>
+                          <div className="text-[16px] sm:text-[20px] block leading-[1.3] mt-3">{iconboxwrap.title}</div>
+                          <div className="text-[14px] font-light leading-[1.6667em] mt-3">{iconboxwrap.iconboxTxt}</div>
                       </li>
                     ))}
                 </ul>

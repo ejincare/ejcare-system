@@ -44,7 +44,7 @@ export default function MainText() {
   };
   
     return (
-        <section className="px-2 py-24 sm:px-8 sm:py-8 md:py-32 xl:py-24 justify-center w-full text-center">
+        <section className="px-2 py-24 sm:px-8 sm:py-8 md:py-40 xl:py-40 justify-center w-full text-center">
           <h2 className="text-black text-2xl text-pretty fade-in-left my-4">
              건물을 가장 잘 아는 기업, <br/>설비에 가장 전문적인 기업
           </h2>
