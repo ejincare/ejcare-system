@@ -20,7 +20,7 @@ export default function Footer() {
                 </section>
                 </div>
                 <div className="flex lg:flex-row flex-col gap-4 mt-4 lg:mt-6 text-[0.875rem] leading-[0.875rem] items-center">
-                <span class="flex items-center" style="gap: .3rem;">
+                <span class="flex items-center gap-2">
                     <Image src={"/img/logo.png"} width={35} alt="" />
                     <strong>㈜이진케어시스템</strong>
                 </span>
