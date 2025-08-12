@@ -17,10 +17,14 @@ export default function Footer() {
                     </div>
                 </section>
                 </div>
-                <div className="flex lg:flex-row flex-col gap-4 mt-4 lg:mt-6 text-[0.875rem] leading-[0.875rem] ">
-                <span>㈜이진케어시스템</span><span>대표이사 : 조원규</span><span>사업자등록번호 : </span><span>주소 : 서울특별시 영등포구 선유로130 206-1호</span>
+                <div className="flex lg:flex-row flex-col gap-4 mt-4 lg:mt-6 text-[0.875rem] leading-[0.875rem] items-center">
+                <span class="flex items-center" style="gap: .3rem;">
+                    <Image src={"/img/logo.png"} width={35} alt="" />
+                    <strong>㈜이진케어시스템</strong>
+                </span>
+                <span>주소 : 서울특별시 영등포구 선유로130 206-1호</span><span>TEL : 02-2677-7511~3</span><span>FAX : 02-582-5582</span>
                 </div>
-                <div className="flex gap-2 mt-8 text-si-gray-6 text-[0.875rem] leading-[0.875rem]"><span>Copyright</span><span>ⓒ</span><span>2024</span><span>All Rights Reserved.</span></div>
+                <div className="flex gap-2 mt-8 text-si-gray-6 text-[0.875rem] leading-[0.875rem]"><span>Copyright ⓒ</span><span>ejincare</span><span>All Rights Reserved.</span></div>
                 <div className="flex flex-row items-center gap-2 mt-16 sm:gap-7">
                 
                 </div>
