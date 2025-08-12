@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
     return (        
         <footer className="flex justify-center px-4 py-8 bg-[#f2f2f6] text-gray-800">
